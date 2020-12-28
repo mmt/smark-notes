@@ -3,7 +3,8 @@ languageCode = "en-us"
 title = "sMark Notes"
 theme = "hugo-ink"
 paginate = 10
-copyright = "© Copyright Mark M. Tobenkin"
+copyright = "© Copyright Mark M. Tobenkin 2020"
+publishDir = "docs"
 
 [params]
     subtitle = "Mark M. Tobenkin's Notes on Mathematics and Other Topics"
