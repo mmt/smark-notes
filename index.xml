@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sMark Notes</title>
+    <title>sMark Notes [DRAFT]</title>
     <link>https://mmt.github.io/smark-notes/</link>
-    <description>Recent content on sMark Notes</description>
+    <description>Recent content on sMark Notes [DRAFT]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
@@ -16,6 +16,17 @@
       <guid>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</guid>
       <description>This post will eventually have a few tricks (just one for now) for deriving state transitions matrices in the context of inertial navigation. These matrices arise when studying linear ODEs, for example: $$ \dot x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
  $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
+    </item>
+    
+    <item>
+      <title>Notation</title>
+      <link>https://mmt.github.io/smark-notes/notation/</link>
+      <pubDate>Mon, 28 Dec 2020 15:44:59 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/notation/</guid>
+      <description>This page covers the mathematical notation used in a number of the posts on this blog.
+Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$. When discussing $\mathbb{R}^n$ we define $e_i$ via:
+$$ e_i[j] := \begin{cases} 1 &amp;amp; i = j \\ 0 &amp;amp; \textrm{o.w.}\end{cases} $$</description>
     </item>
     
     <item>
