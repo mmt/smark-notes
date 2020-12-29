@@ -1,7 +1,7 @@
 baseURL = "https://mmt.github.io/smark-notes/"
 #baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "sMark Notes"
+title = "sMark Notes [DRAFT]"
 theme = "hugo-ink"
 paginate = 10
 copyright = "© Copyright Mark M. Tobenkin 2020"
