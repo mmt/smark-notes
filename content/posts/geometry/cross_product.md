@@ -5,20 +5,21 @@ draft: false
 tags: ["geometry", "navigation"]
 ---
 This note is going to go important properties of what you might call the cross product matrix.
-For a vector $v \in \mathbb{R}^3$ we'll write $$[v]_\times = \begin{bmatrix} 0 & -v_z & v_y \\\\ v_z & 0 & -v_x \\\\ -v_y & v_x & 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[v]\_\times w = v \times w$ for a all $w \in \mathbb{R}^3$.
+For a vector $u \in \mathbb{R}^3$ we'll write $$[u]_\times = \begin{bmatrix} 0 & -u_z & u_y \\\\ u_z & 0 & -u_x \\\\ -u_y & u_x & 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]\_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
 
-These matrices are closely related to rotations due through the Rodrigues formula:
+These matrices are closely related to rotations due through the [Rodrigues formula](https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula).  For every $R \in SO(3)$ there exists a $u \in \mathbb{R}^3$ such that:
 $$
-R(\theta, u) = \exp\left([\theta u ]\_\times\right) = I + \sin(\theta) [u]\_\times + (1 - \cos(\theta))[u]\_\times^2.
+R = \exp\left([u ]\_\times\right) = I + \frac{\sin(\\|u\\|)}{\\|u\\|} [u]\_\times + \frac{(1 - \cos(\theta))}{\\|u\\|^2}[u]\_\times^2.
 $$
-Here the matrix $R(\theta, a)$ is a rotation about the unit norm vector $a$ by an angle $\theta$.
+and for every $u \in \mathbb{R}^3$, $\exp([u]\_\times) \in SO(3)$.
+
 # Relationship to Linear Transforms
-Important properties of the cross-product matrix can be derived from its relationship two the determinant:
+Important properties of the cross-product matrix can be derived from its relationship with the determinant:
 $$
 \det\left(\begin{bmatrix}
 u & v & w
 \end{bmatrix}\right) = u^T [v]_\times w
-\qquad \forall \; u, v, w \in \mathbb{R}^3.$$
+\qquad \forall \\; u, v, w \in \mathbb{R}^3.$$
 This can be easily proven using expansion by minors along the first column.
 Given an arbitrary invertible matrix $M \in \mathbb{R}^{3 \times 3}$ we therefore have:
 
@@ -28,7 +29,7 @@ u & v & w
 \end{bmatrix}\right) = u^T\left(M^T [Mv]_\times M\right)w
 \qquad \forall \; u, v, w \in \mathbb{R}^3.$$
 
-But basic properties of the determinant also give use
+But basic properties of the determinant also give us
 $$
 \det\left(M\begin{bmatrix}
 u & v & w
@@ -40,7 +41,7 @@ $$ \det(M)  M^{-T} [v]_\times = [ Mv ]\_\times M \qquad \forall\; v \in \mathbb{
 
 This identity is particularly useful when $M = R$ where $R$ is an element of $SO(3)$ so that $R^T = R^{-1}$ and $\det(R) = 1$:
 
-$$R [v]_\times = [ Rv ]\_\times R \qquad \forall \; v \in \mathbb{R}^3, R \in SO(3).$$
+$$R [v]_\times = [ Rv ]\_\times R \qquad \forall \\; v \in \mathbb{R}^3, R \in SO(3).$$
 
 # Algebraic Properties
 ## Anti-symmetry

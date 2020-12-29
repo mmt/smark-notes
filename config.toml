@@ -1,4 +1,5 @@
-baseURL = "https://mmt.github.io/smark-notes/"
+#baseURL = "https://mmt.github.io/smark-notes/"
+baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "sMark Notes"
 theme = "hugo-ink"
@@ -23,6 +24,11 @@ weight = 2
 [[menu.main]]
 name = "About"
 url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Notation"
+url = "/notation"
 weight = 3
 
 [[menu.main]]
