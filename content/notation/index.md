@@ -1,7 +1,7 @@
 ---
 title: "Notation"
 date: 2020-12-28T15:44:59-08:00
-draft: true
+pdraft: False
 ---
 
 This page covers the mathematical notation used in a number of the posts on this blog.
