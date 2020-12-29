@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mmt.github.io/smark-notes/posts/</loc>
+    <lastmod>2020-12-28T23:38:22-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</loc>
+    <lastmod>2020-12-28T23:38:22-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mmt.github.io/smark-notes/posts/papers/interesting_papers/</loc>
+    <lastmod>2020-12-28T11:30:31-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mmt.github.io/smark-notes/tags/geometry/</loc>
     <lastmod>2020-12-27T12:55:13-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mmt.github.io/smark-notes/tags/navigation/</loc>
-    <lastmod>2020-12-27T12:55:13-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mmt.github.io/smark-notes/posts/</loc>
     <lastmod>2020-12-27T12:55:13-08:00</lastmod>
   </url>
   

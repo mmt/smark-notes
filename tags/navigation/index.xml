@@ -14,8 +14,8 @@
       <pubDate>Sun, 27 Dec 2020 12:55:13 -0800</pubDate>
       
       <guid>https://mmt.github.io/smark-notes/posts/geometry/cross_product/</guid>
-      <description>This note is going to go important properties of what you might call the cross product matrix. For a vector $v \in \mathbb{R}^3$ we&amp;rsquo;ll write $$[v]_\times = \begin{bmatrix} 0 &amp;amp; -v_z &amp;amp; v_y \\ v_z &amp;amp; 0 &amp;amp; -v_x \\ -v_y &amp;amp; v_x &amp;amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[v]_\times w = v \times w$ for a all $w \in \mathbb{R}^3$.
-These matrices are closely related to rotations due through the Rodrigues formula: $$ R(\theta, u) = \exp\left([\theta u ]_\times\right) = I + \sin(\theta) [u]_\times + (1 - \cos(\theta))[u]_\times^2.</description>
+      <description>This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&amp;rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp;amp; -u_z &amp;amp; u_y \\ u_z &amp;amp; 0 &amp;amp; -u_x \\ -u_y &amp;amp; u_x &amp;amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
+These matrices are closely related to rotations due through the Rodrigues formula.</description>
     </item>
     
   </channel>
