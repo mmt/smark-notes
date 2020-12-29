@@ -1,5 +1,5 @@
-#baseURL = "https://mmt.github.io/smark-notes/"
-baseURL = "http://example.org/"
+baseURL = "https://mmt.github.io/smark-notes/"
+#baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "sMark Notes"
 theme = "hugo-ink"
