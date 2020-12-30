@@ -14,8 +14,8 @@
       <pubDate>Mon, 28 Dec 2020 23:38:22 -0800</pubDate>
       
       <guid>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</guid>
-      <description>This post will eventually have a few tricks (just one for now) for deriving state transitions matrices in the context of inertial navigation. These matrices arise when studying linear ODEs, for example: $$ \dot x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
- $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
+      <description>This post will eventually have a few tricks (just one for now) for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
+ $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
     </item>
     
     <item>
@@ -24,9 +24,8 @@
       <pubDate>Mon, 28 Dec 2020 15:44:59 -0800</pubDate>
       
       <guid>https://mmt.github.io/smark-notes/notation/</guid>
-      <description>This page covers the mathematical notation used in a number of the posts on this blog.
-Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$. When discussing $\mathbb{R}^n$ we define $e_i$ via:
-$$ e_i[j] := \begin{cases} 1 &amp;amp; i = j \\ 0 &amp;amp; \textrm{o.w.}\end{cases} $$</description>
+      <description>This page covers the mathematical notation used in a number of the posts on this blog. As force of habit I can&amp;rsquo;t help but use “we” in mathematical writing &amp;ndash; I hope it doesn&amp;rsquo;t come across as too pretentious!
+Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$.</description>
     </item>
     
     <item>
@@ -35,7 +34,21 @@ $$ e_i[j] := \begin{cases} 1 &amp;amp; i = j \\ 0 &amp;amp; \textrm{o.w.}\end{ca
       <pubDate>Mon, 28 Dec 2020 11:30:31 -0800</pubDate>
       
       <guid>https://mmt.github.io/smark-notes/posts/papers/interesting_papers/</guid>
-      <description>Books  Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook Naive Lie Theory  Inertial Filtering  Quaternion kinematics for error-state Kalman filter IMU Error State Modeling for State Estimation and SensorCalibration: A Tutorial Attitude Error Representations for Kalman Filtering  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory In Estimation  A micro Lie theory for state estimation in robotics  </description>
+      <description>Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  </description>
+    </item>
+    
+    <item>
+      <title>Matrix Exponential Directional Derivative</title>
+      <link>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</link>
+      <pubDate>Mon, 28 Dec 2020 10:45:34 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</guid>
+      <description>We can find a general expression for the derivative:
+$$ \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} $$
+where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
+$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} &amp;amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\
+\end{align} $$
+ Proof Sketch: Consider the function: $$ \Phi(t, \lambda) = \exp(t(A + \lambda B)).</description>
     </item>
     
     <item>

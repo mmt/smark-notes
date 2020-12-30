@@ -4,29 +4,26 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Notation - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="Notation">
-<meta itemprop="description" content="This page covers the mathematical notation used in a number of the posts on this blog.
-Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$. When discussing $\mathbb{R}^n$ we define $e_i$ via:
-$$ e_i[j] := \begin{cases} 1 &amp; i = j \\ 0 &amp; \textrm{o.w.}\end{cases} $$">
+<meta itemprop="description" content="This page covers the mathematical notation used in a number of the posts on this blog. As force of habit I can&rsquo;t help but use “we” in mathematical writing &ndash; I hope it doesn&rsquo;t come across as too pretentious!
+Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$.">
 <meta itemprop="datePublished" content="2020-12-28T15:44:59-08:00" />
 <meta itemprop="dateModified" content="2020-12-28T15:44:59-08:00" />
-<meta itemprop="wordCount" content="381">
+<meta itemprop="wordCount" content="424">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="navigation,geometry," />
 <meta property="og:title" content="Notation" />
-<meta property="og:description" content="This page covers the mathematical notation used in a number of the posts on this blog.
-Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$. When discussing $\mathbb{R}^n$ we define $e_i$ via:
-$$ e_i[j] := \begin{cases} 1 &amp; i = j \\ 0 &amp; \textrm{o.w.}\end{cases} $$" />
+<meta property="og:description" content="This page covers the mathematical notation used in a number of the posts on this blog. As force of habit I can&rsquo;t help but use “we” in mathematical writing &ndash; I hope it doesn&rsquo;t come across as too pretentious!
+Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mmt.github.io/smark-notes/notation/" />
 <meta property="article:published_time" content="2020-12-28T15:44:59-08:00" />
 <meta property="article:modified_time" content="2020-12-28T15:44:59-08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Notation"/>
-<meta name="twitter:description" content="This page covers the mathematical notation used in a number of the posts on this blog.
-Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$. When discussing $\mathbb{R}^n$ we define $e_i$ via:
-$$ e_i[j] := \begin{cases} 1 &amp; i = j \\ 0 &amp; \textrm{o.w.}\end{cases} $$"/>
+<meta name="twitter:description" content="This page covers the mathematical notation used in a number of the posts on this blog. As force of habit I can&rsquo;t help but use “we” in mathematical writing &ndash; I hope it doesn&rsquo;t come across as too pretentious!
+Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$."/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/main.css" />
@@ -115,7 +112,10 @@ $$ e_i[j] := \begin{cases} 1 &amp; i = j \\ 0 &amp; \textrm{o.w.}\end{cases} $$"
 			</div>
 					
 			<div class="markdown">
-				<p>This page covers the mathematical notation used in a number of the posts on this blog.</p>
+				<p>This page covers the mathematical notation used in a number of the
+posts on this blog.  As force of habit I can&rsquo;t help but use “we” in
+mathematical writing &ndash; I hope it doesn&rsquo;t come across as too
+pretentious!</p>
 <h1 id="linear-algebra">Linear Algebra</h1>
 <h2 id="components-and-unit-vectors">Components and Unit Vectors</h2>
 <p>We write $I$ for the identity matrix when its dimensions can be inferred.
@@ -135,7 +135,7 @@ e_x := e_1, \qquad e_y := e_2, \qquad e_z := e_3
 $$</p>
 <p>For $v \in \mathbb{R}^3$ we write its components as:
 $$
-v_x := e_x^T v, \qquad v_y := e_y^T v, \qquad v_z := e_z^T v
+v_x := e_x^T v = v[1], \qquad v_y := e_y^T v = v[2], \qquad v_z := e_z^T v = v[3].
 $$</p>
 <h1 id="geometry">Geometry</h1>
 <h2 id="cross-product-matrix">Cross product matrix</h2>
@@ -149,10 +149,10 @@ right-handed axes.  We denote reference frames with capital letters.</p>
 <p>For a vector $v$ in three-dimensional space we write $v^A$ to denote $v$ <em>resolved</em> in the axes of the reference frame A.</p>
 </li>
 <li>
-<p>The symbol $C_A^B$ denotes the rotation matrix rotating vectors expressed in the coordinates of the $A$ frame to be represented in the coordinates of the $B$ frame, i.e. $v^B = C_A^B v^A$ for all $v$.</p>
+<p>The symbol $C_B^A$ denotes the rotation matrix rotating vectors expressed in the coordinates of the $B$-frame to be represented in the coordinates of the $A$-frame, i.e. $v^A = C_B^A v^B$ for all $v$.</p>
 </li>
 </ul>
-<p>With these definitions we some simple rules:
+<p>These matrices follow a simple rule:
 $$
 C_B^C C_A^B = C_A^C
 $$</p>
@@ -172,6 +172,10 @@ $$</p>
 <p>When resolving velocity or acceleration in another frame we write:
 $$
 v_{AB}^C(t) := C_A^C v_{AB}^A(t), \qquad a_{AB}^C := C_A^C a_{AB}^A(t).
+$$</p>
+<p>Additionally, we define $\omega_{AB}^B(t)$ to be the angular rate such that:
+$$
+\frac{d}{dt} C_B^A(t) = C_B^A(t)[\omega_{AB}^B(t)]_\times
 $$</p>
 
 			</div>

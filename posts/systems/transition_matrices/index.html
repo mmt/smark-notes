@@ -4,26 +4,26 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>State Transition Matrices - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="State Transition Matrices">
-<meta itemprop="description" content="This post will eventually have a few tricks (just one for now) for deriving state transitions matrices in the context of inertial navigation. These matrices arise when studying linear ODEs, for example: $$ \dot x(t) = F(t)x(t) &#43; G(t) u(t), \qquad x(t_0) = x_0 $$ where
- $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.">
+<meta itemprop="description" content="This post will eventually have a few tricks (just one for now) for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) &#43; G(t) u(t), \qquad x(t_0) = x_0 $$ where
+ $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.">
 <meta itemprop="datePublished" content="2020-12-28T23:38:22-08:00" />
 <meta itemprop="dateModified" content="2020-12-28T23:38:22-08:00" />
-<meta itemprop="wordCount" content="284">
+<meta itemprop="wordCount" content="342">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="linear-systems," />
 <meta property="og:title" content="State Transition Matrices" />
-<meta property="og:description" content="This post will eventually have a few tricks (just one for now) for deriving state transitions matrices in the context of inertial navigation. These matrices arise when studying linear ODEs, for example: $$ \dot x(t) = F(t)x(t) &#43; G(t) u(t), \qquad x(t_0) = x_0 $$ where
- $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE." />
+<meta property="og:description" content="This post will eventually have a few tricks (just one for now) for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) &#43; G(t) u(t), \qquad x(t_0) = x_0 $$ where
+ $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mmt.github.io/smark-notes/posts/systems/transition_matrices/" />
 <meta property="article:published_time" content="2020-12-28T23:38:22-08:00" />
 <meta property="article:modified_time" content="2020-12-28T23:38:22-08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="State Transition Matrices"/>
-<meta name="twitter:description" content="This post will eventually have a few tricks (just one for now) for deriving state transitions matrices in the context of inertial navigation. These matrices arise when studying linear ODEs, for example: $$ \dot x(t) = F(t)x(t) &#43; G(t) u(t), \qquad x(t_0) = x_0 $$ where
- $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE."/>
+<meta name="twitter:description" content="This post will eventually have a few tricks (just one for now) for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) &#43; G(t) u(t), \qquad x(t_0) = x_0 $$ where
+ $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE."/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/main.css" />
@@ -114,20 +114,21 @@
 			<div class="markdown">
 				<p>This post will eventually have a few tricks (just one for now) for
 deriving
-<a href="https://en.wikipedia.org/wiki/State-transition_matrix">state transitions matrices</a> in
-the context of inertial navigation.
+<a href="https://en.wikipedia.org/wiki/State-transition_matrix">state transitions matrices</a>.
 These matrices arise when studying linear ODEs, for example:
 $$
-\dot x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0
+\frac{d}{dt} x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0
 $$
 where</p>
 <ul>
 <li>$F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix,</li>
 <li>$G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix,</li>
-<li>$u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input,</li>
+<li>$w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input,</li>
 <li>$x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</li>
 </ul>
-<p>The solution can be written as:
+<p>Time-varying linear ODEs of this sort generally arise from linearizing
+a non-linear system of equations around a nominal solution.</p>
+<p>The solution of this linear ODE can be written as:
 $$
 x(t) = \Phi(t, t_0) x(t_0) + \int_{t_0}^t \Phi(t, s) G(s) u(s)\; ds
 $$</p>
@@ -135,9 +136,18 @@ $$</p>
 \times n}$ is the state transition matrix.  This matrix itself is the
 solution of the autonomous linear ODE:
 $$
-\dot \Phi(t, \tau) = F(t) \Phi(t, \tau), \qquad \Phi(\tau, \tau) = I.
+\frac{d}{dt} \Phi(t, \tau) = F(t) \Phi(t, \tau), \qquad \Phi(\tau, \tau) = I.
 $$</p>
-<h1 id="solution-for-block-triangular-f">Solution for Block Triangular $F$</h1>
+<h1 id="linear-time-invariant-case">Linear Time-Invariant Case</h1>
+<p>In the case where $F$ is constant (i.e. $F(t) \equiv F_0$) we have:
+$$
+\Phi(t, \tau) = \exp((t-\tau) F_0)
+$$
+so that the overall solution reads:
+$$
+x(t) = \exp((t-\tau)F_0) x(t_0) + \int_{t_0}^t \exp((t-s)F_0) G(s) u(s)\; ds
+$$</p>
+<h1 id="block_triangular">Solution for Block Triangular $F$</h1>
 <p>Say $F$ is of the form:
 $$F(t) = \begin{bmatrix} F_{11}(t) &amp; F_{12}(t) \\ 0 &amp; F_{22}(t)\end{bmatrix}.$$
 Then $\Phi$ can also be written as:
@@ -145,7 +155,7 @@ $$\Phi(t, \tau) = \begin{bmatrix} \Phi_{11}(t, \tau) &amp; \Phi_{12}(t, \tau) \\
 with $\Phi_{11}$ and $\Phi_{22}$ being the state-transition matrices associated with $F_{11}$ and $F_{22}$ independently:
 $$
 \begin{align}
-\dot \Phi_{ii}(t, \tau) &amp;= F_{ii}(t) \Phi_{ii}(t, \tau), \qquad \Phi_{ii}(\tau, \tau) = I \qquad i \in \{1, 2\}. \\<br>
+\frac{d}{dt} \Phi_{ii}(t, \tau) &amp;= F_{ii}(t) \Phi_{ii}(t, \tau), \qquad \Phi_{ii}(\tau, \tau) = I \qquad i \in \{1, 2\}. \\<br>
 \end{align}
 $$
 and
@@ -168,6 +178,12 @@ $$</p>
 
 			<div class="tags">
 				
+					
+						<ul class="flat">
+							
+							<li><a href="/smark-notes/tags/linear-systems">linear-systems</a></li>
+							
+						</ul>
 					
 				
 			</div></div>

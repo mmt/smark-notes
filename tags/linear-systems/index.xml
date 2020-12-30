@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linear-systems on sMark Notes [DRAFT]</title>
+    <link>https://mmt.github.io/smark-notes/tags/linear-systems/</link>
+    <description>Recent content in linear-systems on sMark Notes [DRAFT]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
+    <lastBuildDate>Mon, 28 Dec 2020 23:38:22 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/tags/linear-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>State Transition Matrices</title>
+      <link>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</link>
+      <pubDate>Mon, 28 Dec 2020 23:38:22 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</guid>
+      <description>This post will eventually have a few tricks (just one for now) for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
+ $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
+    </item>
+    
+    <item>
+      <title>Matrix Exponential Directional Derivative</title>
+      <link>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</link>
+      <pubDate>Mon, 28 Dec 2020 10:45:34 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</guid>
+      <description>We can find a general expression for the derivative:
+$$ \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} $$
+where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
+$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} &amp;amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\
+\end{align} $$
+ Proof Sketch: Consider the function: $$ \Phi(t, \lambda) = \exp(t(A + \lambda B)).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,23 +4,23 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Interesting Papers - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="Interesting Papers">
-<meta itemprop="description" content="Books  Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook Naive Lie Theory  Inertial Filtering  Quaternion kinematics for error-state Kalman filter IMU Error State Modeling for State Estimation and SensorCalibration: A Tutorial Attitude Error Representations for Kalman Filtering  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory In Estimation  A micro Lie theory for state estimation in robotics  ">
+<meta itemprop="description" content="Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  ">
 <meta itemprop="datePublished" content="2020-12-28T11:30:31-08:00" />
 <meta itemprop="dateModified" content="2020-12-28T11:30:31-08:00" />
-<meta itemprop="wordCount" content="73">
+<meta itemprop="wordCount" content="95">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="navigation,lie," />
 <meta property="og:title" content="Interesting Papers" />
-<meta property="og:description" content="Books  Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook Naive Lie Theory  Inertial Filtering  Quaternion kinematics for error-state Kalman filter IMU Error State Modeling for State Estimation and SensorCalibration: A Tutorial Attitude Error Representations for Kalman Filtering  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory In Estimation  A micro Lie theory for state estimation in robotics  " />
+<meta property="og:description" content="Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mmt.github.io/smark-notes/posts/papers/interesting_papers/" />
 <meta property="article:published_time" content="2020-12-28T11:30:31-08:00" />
 <meta property="article:modified_time" content="2020-12-28T11:30:31-08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Interesting Papers"/>
-<meta name="twitter:description" content="Books  Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook Naive Lie Theory  Inertial Filtering  Quaternion kinematics for error-state Kalman filter IMU Error State Modeling for State Estimation and SensorCalibration: A Tutorial Attitude Error Representations for Kalman Filtering  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory In Estimation  A micro Lie theory for state estimation in robotics  "/>
+<meta name="twitter:description" content="Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  "/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/main.css" />
@@ -109,32 +109,49 @@
 			</div>
 					
 			<div class="markdown">
-				<h1 id="books">Books</h1>
+				<h1 id="navigation-and-kalman-filtering">Navigation and Kalman Filtering</h1>
+<h2 id="kalman-filtering">Kalman Filtering</h2>
 <ul>
-<li><a href="https://www.amazon.com/Principles-Multisensor-Integrated-Navigation-Applications/dp/1608070050">Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems</a></li>
-<li><a href="https://www.amazon.com/Advanced-Kalman-Filtering-Least-Squares-Modeling-ebook/dp/B005CD78H8">Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook</a></li>
-<li><a href="https://www.amazon.com/Naive-Theory-Undergraduate-Texts-Mathematics/dp/0387782141/">Naive Lie Theory</a></li>
+<li><strong>Book</strong>: <a href="https://www.amazon.com/Principles-Multisensor-Integrated-Navigation-Applications/dp/1608070050">Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems</a></li>
+<li><strong>Book</strong>: <a href="https://www.amazon.com/Advanced-Kalman-Filtering-Least-Squares-Modeling-ebook/dp/B005CD78H8">Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook</a></li>
 </ul>
-<h1 id="inertial-filtering">Inertial Filtering</h1>
+<h2 id="inertial-sensors">Inertial Sensors</h2>
+<ul>
+<li><a href="https://escholarship.org/content/qt1vf7j52p/qt1vf7j52p_noSplash_750bb4e8a68d04f2d577450b1bf56572.pdf?t=qe8g5u">IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial</a></li>
+</ul>
+<h2 id="rotation-formalisms">Rotation Formalisms</h2>
 <ul>
 <li><a href="https://arxiv.org/abs/1711.02508">Quaternion kinematics for error-state Kalman filter</a></li>
-<li><a href="https://escholarship.org/content/qt1vf7j52p/qt1vf7j52p_noSplash_750bb4e8a68d04f2d577450b1bf56572.pdf?t=qe8g5u">IMU Error State Modeling for State Estimation and SensorCalibration: A Tutorial</a></li>
 <li><a href="https://www.researchgate.net/publication/245432681_Attitude_Error_Representations_for_Kalman_Filtering">Attitude Error Representations for Kalman Filtering</a></li>
+<li><a href="https://ieeexplore.ieee.org/document/68165/">On the rotation vector differential equation</a></li>
 </ul>
-<h1 id="visual-navigation">Visual navigation</h1>
+<h2 id="visual-navigation">Visual navigation</h2>
 <ul>
 <li><a href="http://www.roboticsproceedings.org/rss09/p37.pdf">Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization</a></li>
 <li><a href="https://intra.ece.ucr.edu/~mourikis/papers/Li2013IJRR.pdf">High-Precision, Consistent EKF-based Visual-Inertial Odometry</a></li>
 </ul>
-<h1 id="lie-theory-in-estimation">Lie Theory In Estimation</h1>
+<h2 id="lie-theory-in-estimation">Lie Theory in Estimation</h2>
 <ul>
 <li><a href="https://arxiv.org/abs/1812.01537">A micro Lie theory for state estimation in robotics</a></li>
+</ul>
+<h1 id="more-general-math">More general Math</h1>
+<h2 id="lie-theory">Lie Theory</h2>
+<ul>
+<li><strong>Book</strong>: <a href="https://www.amazon.com/Naive-Theory-Undergraduate-Texts-Mathematics/dp/0387782141/">Naive Lie Theory</a></li>
 </ul>
 
 			</div>
 
 			<div class="tags">
 				
+					
+						<ul class="flat">
+							
+							<li><a href="/smark-notes/tags/navigation">navigation</a></li>
+							
+							<li><a href="/smark-notes/tags/lie">lie</a></li>
+							
+						</ul>
 					
 				
 			</div></div>
