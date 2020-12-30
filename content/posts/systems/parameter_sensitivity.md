@@ -1,63 +1,64 @@
 ---
-title: "Matrix Exponential Jacobians"
+title: "Matrix Exponential Directional Derivative"
 date: 2020-12-28T10:45:34-08:00
-draft: True
-tags: ["SO(3)", "SE(3)", "Lie"]
+draft: False
+tags: ["linear-systems"]
 ---
 
-This note is going to go over some math that's useful for deriving the linearization
-of equations like:
+We can find a general expression for the derivative:
 
 $$
-\exp(A + \Delta)
+\left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0}
 $$
 
-with respect to $\Delta$ where $A, \Delta \in \mathbb{R}^{n
-\times n}$ and $\exp$ is the matrix exponential.  W.o.l.g. we
-will only be interested in the derivative at $\delta = 0$.
-
-The route I will take will be to look at each component of $\Delta$ one at a time writing
-$$
-\Delta = \sum_{i=1}^n \sum_{j=1}^n \Delta(i, j) e_i e_j^T.
-$$
-
-We look at the following function of a "time" parameter $t$ and a scalar parameter $\delta$:
-$$
-\Phi(t, \delta) = \exp(t(A + \delta B))
-$$
-
-evaluated at $t = 1$.  We know that $\Phi$ satisfies the differential equation:
-
-$$
-\frac{d}{dt} \Phi(t, \delta) = (A + \delta B) \Phi(t, \delta), \qquad \Phi(0, \delta) = I.
-$$
-
-The idea to proceed is to find a differential equation for $\frac{\partial}{\partial \delta} \Phi(t, \delta)$.
+where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory.  We will show that:
 
 $$
 \begin{align}
-\left . \frac{d}{dt} \frac{\partial}{\partial \delta} \Phi(t, \delta)\right |\_{\delta=0} &=
- \left . \frac{\partial}{\partial \delta} \left(\frac{d}{dt} \Phi(t, \delta)\right) \right |\_{\delta=0}\\\\
+\left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0}
+&= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \\;ds \\\\
+\end{align}
+$$
+
+>*Proof Sketch*:
+Consider the function:
+$$
+\Phi(t, \lambda) = \exp(t(A + \lambda B)).
+$$
+We are looking to find
+$\left . \frac{\partial}{\partial \lambda} \Phi(1, \lambda) \right |_{\lambda = 0}$.
+>
+>We know that $\Phi$ is given by a family of solutions of Linear ODEs:
+$$
+\frac{d}{dt} \Phi(t, \lambda) = (A + \lambda \Delta) \Phi(t, \lambda), \qquad \Phi(0, \lambda) = I.
+$$
+The idea to proceed is to find a differential equation for $\frac{\partial}{\partial \lambda} \Phi(t, \lambda)$.
+$$
+\begin{align}
+\left . \frac{d}{dt} \frac{\partial}{\partial \lambda} \Phi(t, \lambda)\right |\_{\lambda=0} &=
+ \left . \frac{\partial}{\partial \lambda} \left(\frac{d}{dt} \Phi(t, \lambda)\right) \right |\_{\lambda=0}\\\\
  &=
- \left . \frac{\partial}{\partial \delta} \left((A + \delta B)\Phi(t, \delta)\right) \right |\_{\delta=0}\\\\
+ \left . \frac{\partial}{\partial \lambda} \left((A + \lambda B)\Phi(t, \lambda)\right) \right |\_{\lambda=0}\\\\
 &=
- A \left . \frac{\partial}{\partial \delta} \Phi(t, \delta)\right|_{\delta=0} + B \Phi(t, 0).
+ A \left . \frac{\partial}{\partial \lambda} \Phi(t, \lambda)\right|_{\lambda=0} + B \Phi(t, 0).
 \end{align}
 $$
-This is combined with an initial condition of $\frac{\partial}{\partial \delta} \Phi(0, \delta) = \frac{\partial}{\partial \delta} I = 0$.
-
-This linear-time-invariant ODE has the solution:
+The initial condition for this solution is $\frac{\partial}{\partial \lambda} \Phi(0, \lambda) = \frac{\partial}{\partial \lambda} I = 0$.
+>
+>This linear-time-invariant ODE has the solution:
 $$
 \begin{align}
-\left . \frac{\partial}{\partial \delta} \Phi(1, \delta) \right |_{\delta=0}
-&= \int_0^1 \exp((1-s)A) B \Phi(s, 0) \\;ds \\\\
-&= \exp(A)\int_0^1 \exp(-sA) B \exp(As) \\;ds \\\\
+\left . \frac{\partial}{\partial \lambda} \Phi(1, \lambda) \right |_{\lambda=0}
+&= \int_0^1 \exp((1-s)A) \Delta \Phi(s, 0) \\;ds \\\\
+&= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \\;ds \\\\
 \end{align}
 $$
+as was to be shown.
 
-
-As an example we can take:
+There is an interesting connection here in to [a property of triangular transition matrices]({{< ref "posts/systems/transition_matrices.md#block_triangular" >}}) notes in another  post in that:
 $$
-\exp\left([v + \xi]\_\times\right)
-\approx \exp([v]\_\times)( I + \int_0^1 \exp(-s[v]\_\times) [
+\begin{bmatrix}
+\Phi(1, 0) & \left . \frac{\partial}{\partial \lambda} \Phi(1, \lambda) \right |_{\lambda=0} \\\\
+0 & \Phi(1, 0)
+\end{bmatrix} = \exp\left(\begin{bmatrix} A & \Delta \\\\ 0 & A\end{bmatrix}\right).
 $$

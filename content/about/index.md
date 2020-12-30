@@ -3,7 +3,7 @@ title: "About"
 date: 2020-12-27T12:49:24-08:00
 draft: False
 ---
-Welcome!  My name is Mark Tobenkin, I'm a software engineer specializing
+Welcome!  My name is Mark Tobenkin, I'm a [software engineer](https://www.linkedin.com/in/mark-tobenkin-131416130/) specializing
 in control and estimation systems.  This web-page is just a collection
 of technical content I've found interesting and would like to hang on to.
 

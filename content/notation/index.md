@@ -1,10 +1,14 @@
 ---
 title: "Notation"
 date: 2020-12-28T15:44:59-08:00
-pdraft: False
+draft: False
+tags: ["navigation", "geometry"]
 ---
 
-This page covers the mathematical notation used in a number of the posts on this blog.
+This page covers the mathematical notation used in a number of the
+posts on this blog.  As force of habit I can't help but use “we” in
+mathematical writing -- I hope it doesn't come across as too
+pretentious!
 
 # Linear Algebra
 ## Components and Unit Vectors
@@ -31,7 +35,7 @@ $$
 
 For $v \in \mathbb{R}^3$ we write its components as:
 $$
-v_x := e_x^T v, \qquad v_y := e_y^T v, \qquad v_z := e_z^T v
+v_x := e_x^T v = v[1], \qquad v_y := e_y^T v = v[2], \qquad v_z := e_z^T v = v[3].
 $$
 
 # Geometry
@@ -45,9 +49,9 @@ right-handed axes.  We denote reference frames with capital letters.
 ### Rotations
 - For a vector $v$ in three-dimensional space we write $v^A$ to denote $v$ *resolved* in the axes of the reference frame A.
 
-- The symbol $C_A^B$ denotes the rotation matrix rotating vectors expressed in the coordinates of the $A$ frame to be represented in the coordinates of the $B$ frame, i.e. $v^B = C_A^B v^A$ for all $v$.
+- The symbol $C_B^A$ denotes the rotation matrix rotating vectors expressed in the coordinates of the $B$-frame to be represented in the coordinates of the $A$-frame, i.e. $v^A = C_B^A v^B$ for all $v$.
 
-With these definitions we some simple rules:
+These matrices follow a simple rule:
 $$
 C_B^C C_A^B = C_A^C
 $$
@@ -61,6 +65,7 @@ p_{AB}^D + p_{BC}^D = p_{AC}^D
 $$
 
 ### Time-varying Reference Frames
+
 If two reference frames $A$ and $B$ vary with respect to time, we define:
 
 $$
@@ -70,4 +75,9 @@ $$
 When resolving velocity or acceleration in another frame we write:
 $$
 v_{AB}^C(t) := C_A^C v_{AB}^A(t), \qquad a_{AB}^C := C_A^C a_{AB}^A(t).
+$$
+
+Additionally, we define $\omega_{AB}^B(t)$ to be the angular rate such that:
+$$
+\frac{d}{dt} C_B^A(t) = C_B^A(t)[\omega_{AB}^B(t)]\_\times
 $$
