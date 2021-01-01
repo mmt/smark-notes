@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lists on sMark Notes [DRAFT]</title>
+    <link>https://mmt.github.io/smark-notes/lists/</link>
+    <description>Recent content in Lists on sMark Notes [DRAFT]</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
+    <lastBuildDate>Wed, 30 Dec 2020 10:07:52 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/lists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting Algorithms / Concepts</title>
+      <link>https://mmt.github.io/smark-notes/lists/interesting_algorithms/</link>
+      <pubDate>Wed, 30 Dec 2020 10:07:52 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/lists/interesting_algorithms/</guid>
+      <description>This post will just be a running collection of useful algorithms / concepts I want to remember.
+Statistics   Poisson Random Variable Confidence Interval
+  Mean Absolute Deviation (MAD)
+  Estimation of Direction Statistics Using Complex Numbers
+  Empirical CDF Confidence Interval: TODO
+  Robust Statistics: 1, 2, 3
+  Algorithms Messaging  Consistent Overhead Byte Stuffing  Data structures  Order Statistics Tree  </description>
+    </item>
+    
+    <item>
+      <title>Interesting Papers</title>
+      <link>https://mmt.github.io/smark-notes/lists/interesting_papers/</link>
+      <pubDate>Mon, 28 Dec 2020 11:30:31 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/lists/interesting_papers/</guid>
+      <description>Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  </description>
+    </item>
+    
+  </channel>
+</rss>

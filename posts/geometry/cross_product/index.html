@@ -2,28 +2,28 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Useful Properties of Cross Product - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Useful Properties of Cross Product">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Useful Properties of so(3) - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Useful Properties of so(3)">
 <meta itemprop="description" content="This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-These matrices are closely related to rotations due through the Rodrigues formula.">
+This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$.">
 <meta itemprop="datePublished" content="2020-12-27T12:55:13-08:00" />
 <meta itemprop="dateModified" content="2020-12-27T12:55:13-08:00" />
-<meta itemprop="wordCount" content="961">
+<meta itemprop="wordCount" content="596">
 
 
 
 <meta itemprop="keywords" content="geometry,navigation," />
-<meta property="og:title" content="Useful Properties of Cross Product" />
+<meta property="og:title" content="Useful Properties of so(3)" />
 <meta property="og:description" content="This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-These matrices are closely related to rotations due through the Rodrigues formula." />
+This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mmt.github.io/smark-notes/posts/geometry/cross_product/" />
 <meta property="article:published_time" content="2020-12-27T12:55:13-08:00" />
 <meta property="article:modified_time" content="2020-12-27T12:55:13-08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Useful Properties of Cross Product"/>
+<meta name="twitter:title" content="Useful Properties of so(3)"/>
 <meta name="twitter:description" content="This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-These matrices are closely related to rotations due through the Rodrigues formula."/>
+This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$."/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/main.css" />
@@ -32,7 +32,7 @@ These matrices are closely related to rotations due through the Rodrigues formul
 
 	
 		<script src="https://mmt.github.io/smark-notes/js/main.js"></script>
-   <script>
+        <script>
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -84,6 +84,10 @@ These matrices are closely related to rotations due through the Rodrigues formul
 			</li>
 			
 			<li>
+				<a href="/smark-notes/lists">Bookmarks</a>
+			</li>
+			
+			<li>
 				<a href="/smark-notes/notation">Notation</a>
 			</li>
 			
@@ -107,19 +111,17 @@ These matrices are closely related to rotations due through the Rodrigues formul
 					</div>
 				
 				<div class="matter">
-					<h1 class="title">Useful Properties of Cross Product</h1>
+					<h1 class="title">Useful Properties of so(3)</h1>
 				</div>
 			</div>
-					
+
 			<div class="markdown">
 				<p>This note is going to go important properties of what you might call the cross product matrix.
 For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.</p>
-<p>These matrices are closely related to rotations due through the <a href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">Rodrigues formula</a>.  For every $R \in SO(3)$ there exists a $u \in \mathbb{R}^3$ such that:
-$$
-R = \exp\left([u ]_\times\right) = I + \frac{\sin(\|u\|)}{\|u\|} [u]_\times + \frac{(1 - \cos(\theta))}{\|u\|^2}[u]_\times^2.
-$$
-and for every $u \in \mathbb{R}^3$, $\exp([u]_\times) \in SO(3)$.</p>
-<h1 id="relationship-to-linear-transforms">Relationship to Linear Transforms</h1>
+<p>This is a meaningful parametrization of all anti-symmetric $3-by-3$
+matrices which is also the Lie algebra corresponding to the set of 3D
+rotation matrices $SO(3)$.</p>
+<h1 id="linear-transforms">Relationship to Linear Transforms</h1>
 <p>Important properties of the cross-product matrix can be derived from its relationship with the determinant:
 $$
 \det\left(\begin{bmatrix}
@@ -150,79 +152,34 @@ $$
 [v]_\times u = -[u]_\times v.
 $$</p>
 <h2 id="lie-bracket">Lie Bracket</h2>
-<p>The following relationship is frequently applied in navigation equations:
-$$ [[u]_\times v]_\times = vu^T - uv^T $$
-It can be verified explicitly (as a hint, the anti-symmetry and bilinearity of the expression means it is sufficient to test the result for the pairs $(u, v) \in \{(e_x, e_y), (e_y, e_z), (e_x, e_z)\}$).</p>
-<h2 id="power-relationships">Power Relationships</h2>
 <p>One of the most useful identities working with cross-product matrices is:
 $$
 \begin{equation}
-[u]_\times [v]_\times = vu^T - u^T v I
+[u]_\times [v]_\times = vu^T - u^T v I \label{eq:product}
 \end{equation}
+$$</p>
+<p>This is not too painful to verify explicitly.  From this property we see that
+the commutator (or Lie bracket) of $[u]_\times$ and $[v]_\times$ can be written:
 $$
-This is not too painful to verify explicitly.  We see from this and the Lie Bracket property that:</p>
-<p>$$
 \begin{equation}
-[u]_\times [v]_\times - [v]_\times [u]_\times = vu^T - uv^T =\left[[u]_\times v\right]_\times
+[u]_\times [v]_\times - [v]_\times [u]_\times = vu^T - uv^T.
 \end{equation}
-$$</p>
-<p>For a unit vector $u \in \mathbb{R}^3$ Equation (1) establishes an important algebraic relationship:</p>
-<p>$$
+$$
+A final important equation is that:
+$$ [[u]_\times v]_\times = vu^T - uv^T $$
+This can also be verified explicitly (as a hint, the anti-symmetry and
+bilinearity of the expression means it is sufficient to test the
+result for the pairs $(u, v) \in \{(e_x, e_y), (e_y, e_z), (e_x,
+e_z)\}$).</p>
+<h2 id="powers">Power Relationships</h2>
+<p>We can also apply Equation $\eqref{eq:product}$ to simplify powers of $[u]_\times$:
+$$
 \begin{align}
-[u ]_\times^3 &amp;= (uu^T - I) [u]_\times = -[u]_\times \\<br>
-[u ]_\times^4 &amp;= -[u]_\times^3 [u]_\times = -[u]_\times^2
+[u ]_\times^3 &amp;= (uu^T - I) [u]_\times = -\|u\|^2[u]_\times \\<br>
+[u ]_\times^4 &amp;= -[u]_\times^3 [u]_\times = -\|u\|^2[u]_\times^2
 \end{align}
-$$
-This makes it clear that any power series in $[u]_x$ can always be rewritten in at most three terms:</p>
-<p>$$
-\alpha I + \beta [u]_\times + \gamma [u]_\times^2
 $$</p>
-<p>I find it more useful to write such expressions as:</p>
-<p>$$
-a I + b [u]_\times + c uu^T
-$$
-with $a = \alpha - \gamma$, $b = \beta$ and $c = \gamma$.</p>
-<p>It is also useful to note that the inverse of such a matrix (when it exists) can be written:
-$$
-(a I + b [u]_\times + c uu^T)^{-1} = d I + e [u]_\times + f uu^T,
-$$
-with:
-$$
-\begin{bmatrix}d \\ e \\ f\end{bmatrix}
-= \frac{1}{a^2+b^2}\begin{bmatrix}a \\ -b \\ \frac{b^2-ca}{a+c}\end{bmatrix}.
-$$</p>
-<blockquote>
-<p><em>Proof:</em> We explicitly expand the product of these two matrices:
-$$
-\begin{gather}
-(a I + b [u]_\times + cuu^T) (d I + e [u]_\times + f uu^T) \\<br>
-=\\<br>
-ad I + ae [u]_\times + af uu^T + bd [u]_\times + be uu^T - be I + c(d+f) uu^T
-\end{gather}
-$$
-For the second matrix to be the inverse of the first, we require that:
-$$
-\begin{bmatrix}
-a &amp; -b &amp; 0 \\<br>
-b &amp;  a&amp; 0 \\<br>
-c &amp; b &amp; a+c
-\end{bmatrix}
-\begin{bmatrix}
-d \\ e \\ f
-\end{bmatrix} = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}
-$$
-The result can then be found by using the general matrix identity:
-$$
-\begin{bmatrix}
-A &amp; 0 \\<br>
-B &amp; C
-\end{bmatrix}^{-1} = \begin{bmatrix}
-A^{-1} &amp; 0 \\<br>
--C^{-1}BA^{-1} &amp; C^{-1}
-\end{bmatrix}.
-$$</p>
-</blockquote>
-<h1 id="eigenvector-analysis">Eigenvector Analysis</h1>
+<h1 id="eigen">Eigenvector Analysis</h1>
 <p>First, it is easy to verify that $[u]_\times u = 0$ so that $u$
 itself is an eigenvector with eigenvalue 0.</p>
 <p>If $u = 0$ then all the eigenvalues are trivially zero.
@@ -241,20 +198,6 @@ That $v - jw$ is an eigenvector with eigenvalue $-j\|u\|$ can be shown similarly
 matrix $[e_x]_\times$ with $u = e_y$ and $w = e_z$, and then
 concluding that the resulting analysis can be transfered to an
 arbitrary $[v]_\times$ by a rotation matrix and scaling.</p>
-<p>Armed with this eigenvector analysis we can revisit the matrices of the form:
-$$
-aI + b [u]_\times + cuu^T.
-$$
-We see that these matrices have the same eigenvectors as $[u]_\times$ owing to $u^Tv = u^Tw = 0$.
-When $|u| = 1$ we can see that the eigen-vector / eigen-value pairs are:</p>
-<ul>
-<li>$(u, a + c)$</li>
-<li>$(v + jw, a-bj)$</li>
-<li>$(v - jw, a+bj)$</li>
-</ul>
-<p>This leads to a second approach to finding our general equation for
-the inverse of these matrices, based on inverting these eigenvalues
-and term-matching to find $(d, e, f)$ from the prior section.</p>
 
 			</div>
 
@@ -272,9 +215,18 @@ and term-matching to find $(d, e, f)$ from the prior section.</p>
 				
 			</div></div>
 	</div>
+        <script src="https://utteranc.es/client.js"
+        repo="mmt/smark-notes"
+        issue-term="pathname"
+        label="utterances-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 	<div class="footer wrapper">
 	<nav class="nav">
-		<div>2020  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+		<div>2021  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
 	</nav>
 </div>
 

@@ -14,17 +14,8 @@
       <pubDate>Mon, 28 Dec 2020 23:38:22 -0800</pubDate>
       
       <guid>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</guid>
-      <description>This post will eventually have a few tricks (just one for now) for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
- $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $w: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
-    </item>
-    
-    <item>
-      <title>Interesting Papers</title>
-      <link>https://mmt.github.io/smark-notes/posts/papers/interesting_papers/</link>
-      <pubDate>Mon, 28 Dec 2020 11:30:31 -0800</pubDate>
-      
-      <guid>https://mmt.github.io/smark-notes/posts/papers/interesting_papers/</guid>
-      <description>Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  </description>
+      <description>This post has a few tricks for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
+ $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
     </item>
     
     <item>
@@ -36,19 +27,19 @@
       <description>We can find a general expression for the derivative:
 $$ \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} $$
 where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
-$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} &amp;amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\
-\end{align} $$
- Proof Sketch: Consider the function: $$ \Phi(t, \lambda) = \exp(t(A + \lambda B)).</description>
+$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} &amp;amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \label{eq:left-A}\\
+&amp;amp;= \left(\int_0^1 \exp(sA) \Delta \exp(-sA) \;ds \right)\exp(A) \label{eq:right-A}\\
+\end{align} $$</description>
     </item>
     
     <item>
-      <title>Useful Properties of Cross Product</title>
+      <title>Useful Properties of so(3)</title>
       <link>https://mmt.github.io/smark-notes/posts/geometry/cross_product/</link>
       <pubDate>Sun, 27 Dec 2020 12:55:13 -0800</pubDate>
       
       <guid>https://mmt.github.io/smark-notes/posts/geometry/cross_product/</guid>
       <description>This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&amp;rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp;amp; -u_z &amp;amp; u_y \\ u_z &amp;amp; 0 &amp;amp; -u_x \\ -u_y &amp;amp; u_x &amp;amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-These matrices are closely related to rotations due through the Rodrigues formula.</description>
+This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$.</description>
     </item>
     
   </channel>

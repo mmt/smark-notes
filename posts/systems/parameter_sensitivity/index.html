@@ -7,12 +7,12 @@
 <meta itemprop="description" content="We can find a general expression for the derivative:
 $$ \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} $$
 where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
-$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} &amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\
-\end{align} $$
- Proof Sketch: Consider the function: $$ \Phi(t, \lambda) = \exp(t(A &#43; \lambda B)).">
+$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} &amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \label{eq:left-A}\\
+&amp;= \left(\int_0^1 \exp(sA) \Delta \exp(-sA) \;ds \right)\exp(A) \label{eq:right-A}\\
+\end{align} $$">
 <meta itemprop="datePublished" content="2020-12-28T10:45:34-08:00" />
 <meta itemprop="dateModified" content="2020-12-28T10:45:34-08:00" />
-<meta itemprop="wordCount" content="287">
+<meta itemprop="wordCount" content="316">
 
 
 
@@ -21,9 +21,9 @@ $$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda 
 <meta property="og:description" content="We can find a general expression for the derivative:
 $$ \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} $$
 where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
-$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} &amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\
-\end{align} $$
- Proof Sketch: Consider the function: $$ \Phi(t, \lambda) = \exp(t(A &#43; \lambda B))." />
+$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} &amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \label{eq:left-A}\\
+&amp;= \left(\int_0^1 \exp(sA) \Delta \exp(-sA) \;ds \right)\exp(A) \label{eq:right-A}\\
+\end{align} $$" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/" />
 <meta property="article:published_time" content="2020-12-28T10:45:34-08:00" />
@@ -33,9 +33,9 @@ $$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda 
 <meta name="twitter:description" content="We can find a general expression for the derivative:
 $$ \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} $$
 where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
-$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} &amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\
-\end{align} $$
- Proof Sketch: Consider the function: $$ \Phi(t, \lambda) = \exp(t(A &#43; \lambda B))."/>
+$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda \Delta) \right |_{\lambda = 0} &amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \label{eq:left-A}\\
+&amp;= \left(\int_0^1 \exp(sA) \Delta \exp(-sA) \;ds \right)\exp(A) \label{eq:right-A}\\
+\end{align} $$"/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/main.css" />
@@ -44,7 +44,7 @@ $$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda 
 
 	
 		<script src="https://mmt.github.io/smark-notes/js/main.js"></script>
-   <script>
+        <script>
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -96,6 +96,10 @@ $$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda 
 			</li>
 			
 			<li>
+				<a href="/smark-notes/lists">Bookmarks</a>
+			</li>
+			
+			<li>
 				<a href="/smark-notes/notation">Notation</a>
 			</li>
 			
@@ -122,7 +126,7 @@ $$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A &#43; \lambda 
 					<h1 class="title">Matrix Exponential Directional Derivative</h1>
 				</div>
 			</div>
-					
+
 			<div class="markdown">
 				<p>We can find a general expression for the derivative:</p>
 <p>$$
@@ -132,7 +136,8 @@ $$</p>
 <p>$$
 \begin{align}
 \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0}
-&amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\<br>
+&amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \label{eq:left-A}\\<br>
+&amp;= \left(\int_0^1 \exp(sA) \Delta \exp(-sA) \;ds \right)\exp(A) \label{eq:right-A}\\<br>
 \end{align}
 $$</p>
 <blockquote>
@@ -164,10 +169,11 @@ $$
 \begin{align}
 \left . \frac{\partial}{\partial \lambda} \Phi(1, \lambda) \right |_{\lambda=0}
 &amp;= \int_0^1 \exp((1-s)A) \Delta \Phi(s, 0) \;ds \\<br>
-&amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(As) \;ds \\<br>
+&amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \\<br>
+&amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \\<br>
 \end{align}
 $$
-as was to be shown.</p>
+which proves Equation $\eqref{eq:left-A}$.  To prove Equation $\eqref{eq:right-A}$ simply apply the change-of variable $t = 1-s$ to the integral.</p>
 </blockquote>
 <p>There is an interesting connection here in to <a href="https://mmt.github.io/smark-notes/posts/systems/transition_matrices/#block_triangular">a property of triangular transition matrices</a> notes in another  post in that:
 $$
@@ -191,9 +197,18 @@ $$</p>
 				
 			</div></div>
 	</div>
+        <script src="https://utteranc.es/client.js"
+        repo="mmt/smark-notes"
+        issue-term="pathname"
+        label="utterances-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
 	<div class="footer wrapper">
 	<nav class="nav">
-		<div>2020  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+		<div>2021  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
 	</nav>
 </div>
 
