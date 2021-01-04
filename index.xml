@@ -2,88 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sMark Notes [DRAFT]</title>
-    <link>https://mmt.github.io/smark-notes/</link>
+    <link>http://example.org/</link>
     <description>Recent content on sMark Notes [DRAFT]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
-    <lastBuildDate>Sun, 27 Dec 2020 12:54:46 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Dec 2020 12:54:46 -0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>$SO(3)$ Integrals</title>
+      <link>http://example.org/posts/navigation/so3_integrals/</link>
+      <pubDate>Sun, 03 Jan 2021 11:48:07 -0800</pubDate>
+      
+      <guid>http://example.org/posts/navigation/so3_integrals/</guid>
+      <description>This post is about a family of integrals that are important when computing state transition matrices in certain navigation problems as well as some other applications, namely: $$ C_n(v, T) : = \int_0^{T} \int_0^{s_n} \ldots \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n \qquad \; n \in \{1, 2, \ldots \}.</description>
+    </item>
+    
+    <item>
+      <title>$\mathfrak{so}(3)$ Power Series</title>
+      <link>http://example.org/posts/geometry/cross_product_power_series/</link>
+      <pubDate>Thu, 31 Dec 2020 23:24:05 -0800</pubDate>
+      
+      <guid>http://example.org/posts/geometry/cross_product_power_series/</guid>
+      <description>This post is about power series of the form:
+$$ \alpha_0 I + \sum_{n=0}^\infty \alpha_n [v]_\times^n.</description>
+    </item>
+    
+    <item>
+      <title>Interesting Software</title>
+      <link>http://example.org/lists/interesting_software/</link>
+      <pubDate>Wed, 30 Dec 2020 10:20:03 -0800</pubDate>
+      
+      <guid>http://example.org/lists/interesting_software/</guid>
+      <description>This post is a running list of some software projects I want to look into more or have found useful in the paste.</description>
+    </item>
+    
     <item>
       <title>Interesting Algorithms / Concepts</title>
-      <link>https://mmt.github.io/smark-notes/lists/interesting_algorithms/</link>
+      <link>http://example.org/lists/interesting_algorithms/</link>
       <pubDate>Wed, 30 Dec 2020 10:07:52 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/lists/interesting_algorithms/</guid>
-      <description>This post will just be a running collection of useful algorithms / concepts I want to remember.
-Statistics   Poisson Random Variable Confidence Interval
-  Mean Absolute Deviation (MAD)
-  Estimation of Direction Statistics Using Complex Numbers
-  Empirical CDF Confidence Interval: TODO
-  Robust Statistics: 1, 2, 3
-  Algorithms Messaging  Consistent Overhead Byte Stuffing  Data structures  Order Statistics Tree  </description>
+      <guid>http://example.org/lists/interesting_algorithms/</guid>
+      <description>This post will just be a running collection of useful algorithms / concepts I want to remember.</description>
     </item>
     
     <item>
       <title>State Transition Matrices</title>
-      <link>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</link>
+      <link>http://example.org/posts/systems/transition_matrices/</link>
       <pubDate>Mon, 28 Dec 2020 23:38:22 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</guid>
-      <description>This post has a few tricks for deriving state transitions matrices. These matrices arise when studying linear ODEs, for example: $$ \frac{d}{dt} x(t) = F(t)x(t) + G(t) u(t), \qquad x(t_0) = x_0 $$ where
- $F: [t_0, t_f] \rightarrow \mathbb{R}^{n\times n}$ is the state matrix, $G: [t_0, t_f] \rightarrow \mathbb{R}^{n \times m}$ is the input matrix, $u: [t_0, t_f] \rightarrow \mathbb{R}^m $ is the input, $x: [t_0, t_f] \rightarrow \mathbb{R}^n$ is the solution of the ODE.</description>
+      <guid>http://example.org/posts/systems/transition_matrices/</guid>
+      <description>This post has a few tricks for deriving state transitions matrices.</description>
     </item>
     
     <item>
       <title>Notation</title>
-      <link>https://mmt.github.io/smark-notes/notation/</link>
+      <link>http://example.org/notation/</link>
       <pubDate>Mon, 28 Dec 2020 15:44:59 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/notation/</guid>
-      <description>This page covers the mathematical notation used in a number of the posts on this blog. As force of habit I can&amp;rsquo;t help but use “we” in mathematical writing &amp;ndash; I hope it doesn&amp;rsquo;t come across as too pretentious!
-Linear Algebra Components and Unit Vectors We write $I$ for the identity matrix when its dimensions can be inferred. When discussing a vector $v \in \mathbb{R}^n$ we denote its $i$-th component by $v[i]$.</description>
+      <guid>http://example.org/notation/</guid>
+      <description>This page covers the mathematical notation used in a number of the posts on this blog.</description>
     </item>
     
     <item>
-      <title>Interesting Papers</title>
-      <link>https://mmt.github.io/smark-notes/lists/interesting_papers/</link>
+      <title>Interesting Papers and Books</title>
+      <link>http://example.org/lists/interesting_papers/</link>
       <pubDate>Mon, 28 Dec 2020 11:30:31 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/lists/interesting_papers/</guid>
-      <description>Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  </description>
+      <guid>http://example.org/lists/interesting_papers/</guid>
+      <description>Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook Book: Stochastic Models, Estimation and Control: Volume 1  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  </description>
     </item>
     
     <item>
       <title>Matrix Exponential Directional Derivative</title>
-      <link>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</link>
+      <link>http://example.org/posts/systems/parameter_sensitivity/</link>
       <pubDate>Mon, 28 Dec 2020 10:45:34 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</guid>
+      <guid>http://example.org/posts/systems/parameter_sensitivity/</guid>
       <description>We can find a general expression for the derivative:
-$$ \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} $$
-where $A, \Delta \in \mathbb{R}^{n \times n}$ using some linear systems theory. We will show that:
-$$ \begin{align} \left . \frac{\partial}{\partial \lambda} \exp(A + \lambda \Delta) \right |_{\lambda = 0} &amp;amp;= \exp(A)\int_0^1 \exp(-sA) \Delta \exp(sA) \;ds \label{eq:left-A}\\
-&amp;amp;= \left(\int_0^1 \exp(sA) \Delta \exp(-sA) \;ds \right)\exp(A) \label{eq:right-A}\\
-\end{align} $$</description>
+$$ \left .</description>
     </item>
     
     <item>
-      <title>Useful Properties of \mathfrak{so}(3)</title>
-      <link>https://mmt.github.io/smark-notes/posts/geometry/cross_product/</link>
+      <title>Useful Properties of $\mathfrak{so}(3)$</title>
+      <link>http://example.org/posts/geometry/cross_product/</link>
       <pubDate>Sun, 27 Dec 2020 12:55:13 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/posts/geometry/cross_product/</guid>
-      <description>This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&amp;rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp;amp; -u_z &amp;amp; u_y \\ u_z &amp;amp; 0 &amp;amp; -u_x \\ -u_y &amp;amp; u_x &amp;amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$.</description>
+      <guid>http://example.org/posts/geometry/cross_product/</guid>
+      <description>This note reviews important properties of what you might call the cross product matrix.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://mmt.github.io/smark-notes/about/</link>
+      <link>http://example.org/about/</link>
       <pubDate>Sun, 27 Dec 2020 12:49:24 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/about/</guid>
-      <description>Welcome! My name is Mark Tobenkin, I&amp;rsquo;m a software engineer specializing in control and estimation systems. This web-page is just a collection of technical content I&amp;rsquo;ve found interesting and would like to hang on to.
-A number of the pages are expository writing on math related to motion estimation and navigation. None of the results are new by any stretch of the imagination, but sometimes they have a derivation that suits my personal tastes (e.</description>
+      <guid>http://example.org/about/</guid>
+      <description>Welcome! My name is Mark Tobenkin, I&amp;rsquo;m a software engineer specializing in control and estimation systems.</description>
     </item>
     
   </channel>

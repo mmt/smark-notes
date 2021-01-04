@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>$SO(3)$ Integrals - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="$SO(3)$ Integrals">
+<meta itemprop="description" content="This post is about a family of integrals that are important when computing state transition matrices in certain navigation problems as well as some other applications, namely: $$ C_n(v, T) : = \int_0^{T} \int_0^{s_n} \ldots \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n \qquad \; n \in \{1, 2, \ldots \}.">
+<meta itemprop="datePublished" content="2021-01-03T11:48:07-08:00" />
+<meta itemprop="dateModified" content="2021-01-03T11:48:07-08:00" />
+<meta itemprop="wordCount" content="574">
+
+
+
+<meta itemprop="keywords" content="navigation,geometry," />
+<meta property="og:title" content="$SO(3)$ Integrals" />
+<meta property="og:description" content="This post is about a family of integrals that are important when computing state transition matrices in certain navigation problems as well as some other applications, namely: $$ C_n(v, T) : = \int_0^{T} \int_0^{s_n} \ldots \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n \qquad \; n \in \{1, 2, \ldots \}." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/navigation/so3_integrals/" />
+<meta property="article:published_time" content="2021-01-03T11:48:07-08:00" />
+<meta property="article:modified_time" content="2021-01-03T11:48:07-08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="$SO(3)$ Integrals"/>
+<meta name="twitter:description" content="This post is about a family of integrals that are important when computing state transition matrices in certain navigation problems as well as some other applications, namely: $$ C_n(v, T) : = \int_0^{T} \int_0^{s_n} \ldots \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n \qquad \; n \in \{1, 2, \ldots \}."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="http://example.org/css/dark.css" />
+
+	
+		<script src="http://example.org/js/main.js"></script>
+        <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'ams'
+
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+	<h1 class="site-title"><a href="http://example.org/">sMark Notes [DRAFT]</a></h1>
+	<div class="site-description"><p>Mark M. Tobenkin&rsquo;s Notes on Math and Other Topics</p><nav class="nav social">
+			<ul class="flat"></ul>
+		</nav></div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/lists">Bookmarks</a>
+			</li>
+			
+			<li>
+				<a href="/notation">Notation</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">03</span>
+							<span class="rest">Jan 2021</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">$SO(3)$ Integrals</h1>
+				</div>
+			</div>
+
+			<div class="markdown">
+				<p>This post is about a family of integrals that are important when
+computing
+<a href="http://example.org/posts/systems/transition_matrices/">state transition matrices</a> in
+certain navigation problems as well as some other applications, namely:
+$$
+C_n(v, T) : = \int_0^{T} \int_0^{s_n} \ldots  \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n \qquad  \; n \in \{1, 2, \ldots \}.
+$$
+where $v \in \mathbb{R}^3$ and $T \geq 0$.
+If we define $C_0(v, t) := \exp(t[v]_\times)$ then these integrals can also be defined by:
+$$
+C_{n+1}(v, T) = \int_0^T C_n(v, s) \; ds.
+$$</p>
+<h1 id="useful-series-of-functions">Useful Series of Functions</h1>
+<p>The solution of the above integrals can be stated simply in terms of two series of functions:
+$$
+\gamma_0(\theta) = \cos(\theta), \qquad \gamma_{n+1}(\theta) = \int_0^\theta \gamma_n(\alpha) \; d\alpha,\qquad  n \in \{0, 1, 2, \ldots \}
+$$
+and:
+$$
+f_n(\theta) = \frac{\gamma_n(\theta)}{\theta^n}, \qquad n \in \{0, 1, 2, \ldots \}.
+$$
+Here are the first view elements of these series:</p>
+<table>
+<thead>
+<tr>
+<th>$n$</th>
+<th style="text-align:center">$\gamma_n(\alpha)$</th>
+<th style="text-align:center">$f_n(\alpha)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$0$</td>
+<td style="text-align:center">$\cos(\alpha)$</td>
+<td style="text-align:center">$\cos(\alpha)$</td>
+</tr>
+<tr>
+<td>$1$</td>
+<td style="text-align:center">$\sin(\alpha)$</td>
+<td style="text-align:center">$\frac{\sin(\alpha)}{\alpha}$</td>
+</tr>
+<tr>
+<td>$2$</td>
+<td style="text-align:center">$1-\cos(\alpha)$</td>
+<td style="text-align:center">$\frac{1 - \cos(\alpha)}{\alpha^2}$</td>
+</tr>
+<tr>
+<td>$3$</td>
+<td style="text-align:center">$\alpha - \sin(\alpha)$</td>
+<td style="text-align:center">$\frac{\alpha - \sin(\alpha)}{\alpha^3}$</td>
+</tr>
+</tbody>
+</table>
+<p>The significance of these functions
+is related to the <a href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">Rodrigues rotation formula</a> via:
+$$
+\begin{equation}
+\exp([\alpha u]_\times)
+= \gamma_0(\alpha) I + \gamma_1(\alpha) [u]_\times + \gamma_2(\alpha) uu^T
+,\qquad \alpha \geq 0, \; \| u \| = 1. \label{eq:rodrigues_gamma}
+\end{equation}
+$$
+and:
+$$
+\begin{equation}
+\exp([v]_\times)
+= f_0(\lVert v \lVert) I + f_1(\lVert v\rVert) [v]_\times + f_2(\rVert|v \Vert|) vv^T, \qquad v \in \mathbb{R}^n. \label{eq:rodrigues_f}
+\end{equation}
+$$</p>
+<h1 id="solution">Solution</h1>
+<p>The solution of the above integrals is given by:
+$$
+C_n(v, T) = T^n \left(f_n(T \lVert v \rVert) I  + f_{n+1}(T \lVert v \rVert) [Tv]_\times  + f_{n+2}(T \lVert v \rVert) (Tv)(Tv)^T\right).
+$$</p>
+<blockquote>
+<p><em>Proof</em>: When $\lVert v \rVert = 0$ the solution holds obviously, otherwise let:</p>
+<ul>
+<li>$\theta := T \lVert v \rVert$</li>
+<li>$u := \frac{v}{\lVert v \rVert}$</li>
+</ul>
+<p>and apply the change of variables $\alpha_k = s_k \lVert v \rVert $:
+$$
+\begin{align}
+C_n(v, T) &amp;= \int_0^{T} \int_0^{s_n} \ldots  \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n, \\<br>
+&amp;= \frac{1}{\lVert v \rVert^n}\int_0^{\theta} \int_0^{\alpha_n} \ldots  \int_0^{\alpha_2}\exp(\alpha_1 [u]_\times) d\alpha_1 \; d\alpha_2 \;\ldots \; d\alpha_n, \\<br>
+&amp;= \frac{1}{\lVert v \rVert^n}C_n(u, \theta).
+\end{align}
+$$
+Next we show that:
+$$
+C_n(u, \theta) = \gamma_n(\theta) I  + \gamma_{n+1}(\theta) [u]_\times  + \gamma_{n+2}(\theta) uu^T.
+$$
+by induction.  The base case of $C_0(u, \theta)$ follows from from Equation $\eqref{eq:rodrigues_gamma}$.
+That:
+$$
+C_{n+1}(u, \theta) = \int_0^\theta C_n(u, \alpha) \; d\alpha
+$$
+then follows from the definition of the $\gamma_\cdot$ functions and linearity of integration.
+Finally we have:
+$$
+\begin{align}
+C_n(v, T) &amp;= \frac{1}{\lVert v \rVert^n}C_n(u, \theta) \\<br>
+&amp;=  \frac{T^n}{\theta^n}\left(
+\gamma_n(\theta) I +
+\gamma_{n+1}(\theta) [u]_\times +
+\gamma_{n+2}(\theta) uu^T
+\right) \\<br>
+&amp;=  T^n\left(
+f_n(\theta) I +
+f_{n+1}(\theta) [\theta u]_\times +
+f_{n+2}(\theta) (\theta u)(\theta u)^T
+\right).
+\end{align}
+$$
+Since $\theta u = T \lVert v \rVert u = T v$ this completes the proof.</p>
+</blockquote>
+<h1 id="power-series-of-gamma_ncdot-and-f_ncdot">Power Series of $\gamma_n(\cdot)$ and $f_n(\cdot)$</h1>
+<p>To wrap up, I want to point out a few properties of the series of
+functions mentioned above.</p>
+<p>It is worth noting that these functions have a simple relationship to
+the Taylor expansions for sine and cosine.  In particular:
+$$
+\begin{align}
+\gamma_{2m}(\alpha) &amp;= (-1)^m\sum_{k=m}^\infty \frac{\alpha^{2k}}{2k!} (-1)^k \\<br>
+\gamma_{2m+1}(\alpha) &amp;= (-1)^m\sum_{k=m}^\infty \frac{\alpha^{2k+1}}{(2k+1)!} (-1)^k \\<br>
+\end{align}
+$$
+(starting from $\gamma_0(\alpha) = \cos(\alpha)$ the above can be proved by term-wise integration), and:
+$$
+\begin{align}
+f_{2m}(\alpha) &amp;= (-1)^m\sum_{k=m}^\infty \frac{\alpha^{2(k-m)}}{2k!} (-1)^k \\<br>
+f_{2m+1}(\alpha) &amp;= (-1)^m\sum_{k=m}^\infty \frac{\alpha^{2(k-m)}}{(2k+1)!} (-1)^k.
+\end{align}
+$$
+From these last two equations we see that:</p>
+<ul>
+<li>The $f_n$ functions are all even.</li>
+<li>$f_n(0) = \frac{1}{n!}$ for all $n$.</li>
+</ul>
+<p>Finally, these expressions provide a method for approximating these functions near $0$.</p>
+
+			</div>
+
+			<div class="tags">
+				
+					
+						<ul class="flat">
+							
+							<li><a href="/tags/navigation">navigation</a></li>
+							
+							<li><a href="/tags/geometry">geometry</a></li>
+							
+						</ul>
+					
+				
+			</div></div>
+	</div>
+        <script src="https://utteranc.es/client.js"
+        repo="mmt/smark-notes"
+        issue-term="pathname"
+        label="utterances-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+</body>
+</html>

@@ -2,36 +2,33 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Useful Properties of \mathfrak{so}(3) - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Useful Properties of \mathfrak{so}(3)">
-<meta itemprop="description" content="This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Useful Properties of $\mathfrak{so}(3)$ - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Useful Properties of $\mathfrak{so}(3)$">
+<meta itemprop="description" content="This note reviews important properties of what you might call the cross product matrix.">
 <meta itemprop="datePublished" content="2020-12-27T12:55:13-08:00" />
 <meta itemprop="dateModified" content="2020-12-27T12:55:13-08:00" />
-<meta itemprop="wordCount" content="596">
+<meta itemprop="wordCount" content="627">
 
 
 
 <meta itemprop="keywords" content="geometry,navigation," />
-<meta property="og:title" content="Useful Properties of \mathfrak{so}(3)" />
-<meta property="og:description" content="This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$." />
+<meta property="og:title" content="Useful Properties of $\mathfrak{so}(3)$" />
+<meta property="og:description" content="This note reviews important properties of what you might call the cross product matrix." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://mmt.github.io/smark-notes/posts/geometry/cross_product/" />
+<meta property="og:url" content="http://example.org/posts/geometry/cross_product/" />
 <meta property="article:published_time" content="2020-12-27T12:55:13-08:00" />
 <meta property="article:modified_time" content="2020-12-27T12:55:13-08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Useful Properties of \mathfrak{so}(3)"/>
-<meta name="twitter:description" content="This note is going to go important properties of what you might call the cross product matrix. For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.
-This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices which is also the Lie algebra corresponding to the set of 3D rotation matrices $SO(3)$."/>
+<meta name="twitter:title" content="Useful Properties of $\mathfrak{so}(3)$"/>
+<meta name="twitter:description" content="This note reviews important properties of what you might call the cross product matrix."/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://mmt.github.io/smark-notes/css/main.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/main.css" />
 
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://mmt.github.io/smark-notes/css/dark.css" />
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="http://example.org/css/dark.css" />
 
 	
-		<script src="https://mmt.github.io/smark-notes/js/main.js"></script>
+		<script src="http://example.org/js/main.js"></script>
         <script>
   MathJax = {
     tex: {
@@ -63,8 +60,8 @@ This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices whi
 	<div class="container wrapper">
 		<div class="header">
 	
-	<h1 class="site-title"><a href="https://mmt.github.io/smark-notes/">sMark Notes [DRAFT]</a></h1>
-	<div class="site-description"><p>Mark M. Tobenkin&rsquo;s Notes on Mathematics and Other Topics</p><nav class="nav social">
+	<h1 class="site-title"><a href="http://example.org/">sMark Notes [DRAFT]</a></h1>
+	<div class="site-description"><p>Mark M. Tobenkin&rsquo;s Notes on Math and Other Topics</p><nav class="nav social">
 			<ul class="flat"></ul>
 		</nav></div>
 
@@ -72,27 +69,27 @@ This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices whi
 		<ul class="flat">
 			
 			<li>
-				<a href="/smark-notes/">Home</a>
+				<a href="/">Home</a>
 			</li>
 			
 			<li>
-				<a href="/smark-notes/posts">All posts</a>
+				<a href="/posts">All posts</a>
 			</li>
 			
 			<li>
-				<a href="/smark-notes/about">About</a>
+				<a href="/about">About</a>
 			</li>
 			
 			<li>
-				<a href="/smark-notes/lists">Bookmarks</a>
+				<a href="/lists">Bookmarks</a>
 			</li>
 			
 			<li>
-				<a href="/smark-notes/notation">Notation</a>
+				<a href="/notation">Notation</a>
 			</li>
 			
 			<li>
-				<a href="/smark-notes/tags">Tags</a>
+				<a href="/tags">Tags</a>
 			</li>
 			
 		</ul>
@@ -111,16 +108,20 @@ This is a meaningful parametrization of all anti-symmetric $3-by-3$ matrices whi
 					</div>
 				
 				<div class="matter">
-					<h1 class="title">Useful Properties of \mathfrak{so}(3)</h1>
+					<h1 class="title">Useful Properties of $\mathfrak{so}(3)$</h1>
 				</div>
 			</div>
 
 			<div class="markdown">
-				<p>This note is going to go important properties of what you might call the cross product matrix.
-For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write $$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}$$ to mean the $3\times 3$ matrix such that $[u]_\times v = u \times v$ for a all $v \in \mathbb{R}^3$.</p>
-<p>This is a meaningful parametrization of all anti-symmetric $3-by-3$
-matrices which is also the Lie algebra corresponding to the set of 3D
-rotation matrices $SO(3)$.</p>
+				<p>This note reviews important properties of what you might call the cross product matrix.
+For a vector $u \in \mathbb{R}^3$ we&rsquo;ll write
+$$[u]_\times = \begin{bmatrix} 0 &amp; -u_z &amp; u_y \\ u_z &amp; 0 &amp; -u_x \\ -u_y &amp; u_x &amp; 0\end{bmatrix}.$$</p>
+<p>This $3 \times 3$ matrix is defined such that $[u]_\times v = u
+\times v$ for all $v \in \mathbb{R}^3$, where $\times$ indicates the
+<a href="https://en.wikipedia.org/wiki/Cross_product">cross product</a> of two vectors.</p>
+<p>This is a meaningful parametrization of all anti-symmetric matrices in
+$\mathbb{R}^{3 \times 3}$.  These matrices are the Lie algebra
+corresponding to the set of 3D rotation matrices $SO(3)$.</p>
 <h1 id="linear-transforms">Relationship to Linear Transforms</h1>
 <p>Important properties of the cross-product matrix can be derived from its relationship with the determinant:
 $$
@@ -128,23 +129,24 @@ $$
 u &amp; v &amp; w
 \end{bmatrix}\right) = u^T [v]_\times w
 \qquad \forall \; u, v, w \in \mathbb{R}^3.$$
-This can be easily proven using expansion by minors along the first column.
-Given an arbitrary invertible matrix $M \in \mathbb{R}^{3 \times 3}$ we therefore have:</p>
+This can be easily proven using <a href="https://en.wikipedia.org/wiki/Determinant#Laplace's_expansion_and_the_adjugate_matrix">expansion by minors</a> along the first column.
+Given an arbitrary matrix $M \in \mathbb{R}^{3 \times 3}$ we therefore have:</p>
 <p>$$
 \det\left(M\begin{bmatrix}
 u &amp; v &amp; w
 \end{bmatrix}\right) = u^T\left(M^T [Mv]_\times M\right)w
-\qquad \forall ; u, v, w \in \mathbb{R}^3.$$</p>
-<p>But basic properties of the determinant also give us
+\qquad \forall \; u, v, w \in \mathbb{R}^3.$$</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Determinant#Multiplicativity_and_matrix_groups">multiplicative property of determinant</a> tells us:
 $$
 \det\left(M\begin{bmatrix}
 u &amp; v &amp; w
 \end{bmatrix}\right) = \det(M) u^T [v]_\times w
-\qquad \forall ; u, v, w \in \mathbb{R}^3.$$
-Since this holds for all $u$ and $v$ we can conclude that:</p>
-<p>$$ \det(M)  M^{-T} [v]_\times = [ Mv ]_\times M \qquad \forall; v \in \mathbb{R}^3, M \in GL(3).$$</p>
-<p>This identity is particularly useful when $M = R$ where $R$ is an element of $SO(3)$ so that $R^T = R^{-1}$ and $\det(R) = 1$:</p>
-<p>$$R [v]_\times = [ Rv ]_\times R \qquad \forall \; v \in \mathbb{R}^3, R \in SO(3).$$</p>
+\qquad \forall \; u, v, w \in \mathbb{R}^3.$$
+Since this holds for all $u$ and $w$ we can conclude that:</p>
+<p>$$ \det(M)  M^{-T} [v]_\times = [ Mv ]_\times M \qquad \forall; v \in \mathbb{R}^3,$$
+so long as $M$ is invertible.</p>
+<p>This identity is particularly useful when $M = C \in SO(3)$ (i.e. when $M$ is a rotation matrix).  Since $C^T = C^{-1}$ and $\det(C) = 1$, we get the identity:</p>
+<p>$$C [v]_\times = [ Cv ]_\times C \qquad \forall \; v \in \mathbb{R}^3, \; C \in SO(3).$$</p>
 <h1 id="algebraic-properties">Algebraic Properties</h1>
 <h2 id="anti-symmetry">Anti-symmetry</h2>
 <p>It is easy to verify that:
@@ -152,14 +154,14 @@ $$
 [v]_\times u = -[u]_\times v.
 $$</p>
 <h2 id="lie-bracket">Lie Bracket</h2>
-<p>One of the most useful identities working with cross-product matrices is:
+<p>One of the most useful identities when working with cross-product matrices is:
 $$
 \begin{equation}
-[u]_\times [v]_\times = vu^T - u^T v I \label{eq:product}
+[u]_\times [v]_\times = vu^T - u^T v I. \label{eq:product}
 \end{equation}
 $$</p>
 <p>This is not too painful to verify explicitly.  From this property we see that
-the commutator (or Lie bracket) of $[u]_\times$ and $[v]_\times$ can be written:
+the <a href="https://en.wikipedia.org/wiki/Lie_algebra#Matrix_Lie_algebras">commutator (or Lie bracket)</a> of $[u]_\times$ and $[v]_\times$ can be written:
 $$
 \begin{equation}
 [u]_\times [v]_\times - [v]_\times [u]_\times = vu^T - uv^T.
@@ -175,16 +177,24 @@ e_z)\}$).</p>
 <p>We can also apply Equation $\eqref{eq:product}$ to simplify powers of $[u]_\times$:
 $$
 \begin{align}
-[u ]_\times^3 &amp;= (uu^T - I) [u]_\times = -\|u\|^2[u]_\times \\<br>
+[u ]_\times^3 &amp;= (uu^T - \|u\|^2 I) [u]_\times = -\|u\|^2[u]_\times \\<br>
 [u ]_\times^4 &amp;= -[u]_\times^3 [u]_\times = -\|u\|^2[u]_\times^2
 \end{align}
 $$</p>
 <h1 id="eigen">Eigenvector Analysis</h1>
-<p>First, it is easy to verify that $[u]_\times u = 0$ so that $u$
-itself is an eigenvector with eigenvalue 0.</p>
-<p>If $u = 0$ then all the eigenvalues are trivially zero.
-Otherwise,  let $v$ be any vector orthogonal to $u$ and let $w =\frac{1}{\|u\|} [u]_\times v$.
-Then $u + j w$ is an eigenvector with eigenvalue $-j\|v\|$:
+<p>If $u = 0$ then all the eigenvalues are trivially zero.</p>
+<p>Otherwise, choose $v$ be any vector such that $v^Tu = 0$ and let $w =
+\frac{1}{\|u\|}[u]_\times v$.  We will show that the eigenvector,
+eigenvalue pairs are:</p>
+<ul>
+<li>$(u, 0)$</li>
+<li>$(v + jw, -j\|u\|)$</li>
+<li>$(v - jw, j\|u\|)$</li>
+</ul>
+<blockquote>
+<p><em>Proof:</em>
+It is easy to verify that $[u]_\times u = 0$.
+We next verify that $v + j w$ is an eigenvector with eigenvalue $-j\|u\|$:
 $$
 \begin{align}
 [u]_x (v + jw) &amp;= \|u\| w + j [u]_x w\\<br>
@@ -193,7 +203,8 @@ $$
 &amp;=  \|u\|\left(w - j  v \right) = -j\|u\|\left(v+jw\right).
 \end{align}
 $$
-That $v - jw$ is an eigenvector with eigenvalue $-j\|u\|$ can be shown similarly.</p>
+That $v - jw$ is an eigenvector with eigenvalue $j\|u\|$ can be shown similarly.</p>
+</blockquote>
 <p>This line or reasoning can be made more concrete by analyzing the
 matrix $[e_x]_\times$ with $u = e_y$ and $w = e_z$, and then
 concluding that the resulting analysis can be transfered to an
@@ -206,9 +217,9 @@ arbitrary $[v]_\times$ by a rotation matrix and scaling.</p>
 					
 						<ul class="flat">
 							
-							<li><a href="/smark-notes/tags/geometry">geometry</a></li>
+							<li><a href="/tags/geometry">geometry</a></li>
 							
-							<li><a href="/smark-notes/tags/navigation">navigation</a></li>
+							<li><a href="/tags/navigation">navigation</a></li>
 							
 						</ul>
 					

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on sMark Notes [DRAFT]</title>
-    <link>https://mmt.github.io/smark-notes/categories/</link>
+    <link>http://example.org/categories/</link>
     <description>Recent content in Categories on sMark Notes [DRAFT]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© Copyright Mark M. Tobenkin 2020</copyright><atom:link href="https://mmt.github.io/smark-notes/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© Copyright Mark M. Tobenkin 2020</copyright><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

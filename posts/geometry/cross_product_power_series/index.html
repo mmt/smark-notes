@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>$\mathfrak{so}(3)$ Power Series - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="$\mathfrak{so}(3)$ Power Series">
+<meta itemprop="description" content="This post is about power series of the form:
+$$ \alpha_0 I &#43; \sum_{n=0}^\infty \alpha_n [v]_\times^n.">
+<meta itemprop="datePublished" content="2020-12-31T23:24:05-08:00" />
+<meta itemprop="dateModified" content="2020-12-31T23:24:05-08:00" />
+<meta itemprop="wordCount" content="589">
+
+
+
+<meta itemprop="keywords" content="geometry,navigation," />
+<meta property="og:title" content="$\mathfrak{so}(3)$ Power Series" />
+<meta property="og:description" content="This post is about power series of the form:
+$$ \alpha_0 I &#43; \sum_{n=0}^\infty \alpha_n [v]_\times^n." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/geometry/cross_product_power_series/" />
+<meta property="article:published_time" content="2020-12-31T23:24:05-08:00" />
+<meta property="article:modified_time" content="2020-12-31T23:24:05-08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="$\mathfrak{so}(3)$ Power Series"/>
+<meta name="twitter:description" content="This post is about power series of the form:
+$$ \alpha_0 I &#43; \sum_{n=0}^\infty \alpha_n [v]_\times^n."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="http://example.org/css/dark.css" />
+
+	
+		<script src="http://example.org/js/main.js"></script>
+        <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'ams'
+
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+	<h1 class="site-title"><a href="http://example.org/">sMark Notes [DRAFT]</a></h1>
+	<div class="site-description"><p>Mark M. Tobenkin&rsquo;s Notes on Math and Other Topics</p><nav class="nav social">
+			<ul class="flat"></ul>
+		</nav></div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/lists">Bookmarks</a>
+			</li>
+			
+			<li>
+				<a href="/notation">Notation</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">31</span>
+							<span class="rest">Dec 2020</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">$\mathfrak{so}(3)$ Power Series</h1>
+				</div>
+			</div>
+
+			<div class="markdown">
+				<p>This post is about power series of the form:</p>
+<p>$$
+\alpha_0 I + \sum_{n=0}^\infty \alpha_n [v]_\times^n.
+$$</p>
+<p>Assuming $v \neq 0$ we can rewrite any such power series as:
+$$
+\beta_0 I + \sum_{n=1}^\infty \beta_n [u]_\times^n, \qquad u = \frac{v}{\|v\|}, \qquad \beta_n = \alpha_n \|v\|^n.
+$$</p>
+<p>Based on the power relationships discussed in a <a href="http://example.org/posts/geometry/cross_product/#powers">previous post</a>, this can be further simplified to:
+$$
+\beta_0 I + \sum_{n=1}^\infty \beta_n [u]_\times^n =
+\beta_0 I + \left(\sum_{n=0}^\infty (-1)^n \beta_{2n+1}\right) [u]_\times + \left(\sum_{n=1}^\infty (-1)^{n+1}\beta_{2n}\right) [u]_\times^2
+$$</p>
+<p>This makes it clear that any power series in $[u]_x$ can always be rewritten as at most three terms:</p>
+<p>$$
+\begin{equation}
+\alpha I + \beta [u]_\times + \gamma [u]_\times^2, \qquad \|u\| = 1 \label{pow}
+\end{equation}
+$$</p>
+<p>Applying $[u]_\times^2 = uu^T - I$, we can find one last simplification:
+$$
+\begin{equation}
+a I + b [u]_\times + c uu^T, \qquad \|u\| = 1\label{proj}
+\end{equation}
+$$
+with $a = \alpha - \gamma$, $b = \beta$ and $c = \gamma$.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">Rodrigues rotation formula</a> for $\exp(\theta [u]_\times)$ is a special case of such a power series worth writing out explicitly:
+$$
+\begin{align}
+\exp([\theta u]_\times) &amp;= I + \sin(\theta) [u]_\times + (1-\cos(\theta)) [u]_\times^2 \\<br>
+&amp;= \cos(\theta) I + \sin(\theta) [u]_\times + (1-\cos(\theta)) uu^T \\<br>
+\end{align}
+$$</p>
+<h2 id="eigen-vector-analysis">Eigen-vector Analysis</h2>
+<p>A <a href="http://example.org/posts/geometry/cross_product/#eigen">previous post</a> reviewed how the eigenvector-eigenvalue pairs for $[u]_\times$.
+When $u \neq 0$ there pairs were:</p>
+<ul>
+<li>$(u, 0)$</li>
+<li>$(v + jw, -\|u\|j)$</li>
+<li>$(v - jw, \|u\|j)$</li>
+</ul>
+<p>where $v$ was any vector orthogonal to $u$ and $w := \frac{1}{\|u\|}[u]_\times v$.</p>
+<p>Its easy to see
+that matrices of the form $\eqref{proj}$ have the same eigenvectors as $[u]_\times$ owing to $u^Tv = u^Tw = 0$, so that the eigen-vector / eigen-value pairs are:</p>
+<ul>
+<li>$(u, a + c)$</li>
+<li>$(v + jw, a-bj)$</li>
+<li>$(v - jw, a+bj)$</li>
+</ul>
+<h2 id="inverse">Inverse</h2>
+<p>There are several ways to show that the matrices of the form $\eqref{proj}$ have an inverse of the form:
+$$
+(a I + b [u]_\times + c uu^T)^{-1} = d I + e [u]_\times + f uu^T,
+$$
+with:
+$$
+\begin{equation}
+\begin{bmatrix}d \\ e \\ f\end{bmatrix}
+= \frac{1}{a^2+b^2}\begin{bmatrix}a \\ -b \\ \frac{b^2-ca}{a+c}\end{bmatrix}. \label{eq:def}
+\end{equation}
+$$
+if and only if $a + c \neq 0$ and $a^2 + b^2 &gt; 0$.  One approach is to apply the eigen-analysis of the previous section, but I prefer the following direct proof.</p>
+<blockquote>
+<p><em>Proof:</em>
+If $a + c= 0$:
+$$
+(a I + b [u]_\times + c uu^T) u = (a + c) u = 0
+$$
+so the matrix is not invertible.  Similarly, if $a^2 + b^2 = 0$ then:
+$$
+(a I + b [u]_\times + c uu^T) = c uu^T
+$$
+which is clearly not invertible.</p>
+<p>Otherwise, we explicitly expand the product of these two matrices:
+$$
+\begin{gather}
+(a I + b [u]_\times + cuu^T) (d I + e [u]_\times + f uu^T) \\<br>
+=\\<br>
+ad I + ae [u]_\times + af uu^T + bd [u]_\times + be uu^T - be I + c(d+f) uu^T\\<br>
+=\\<br>
+(ad-be) I + (bd+ae) [u]_\times + (cd + be + (a+c)f) uu^T.
+\end{gather}
+$$
+For the second matrix to be the inverse of the first, requires that:
+$$
+\begin{equation}
+\begin{bmatrix}
+a &amp; -b &amp; 0 \\<br>
+b &amp;  a&amp; 0 \\<br>
+c &amp; b &amp; a+c
+\end{bmatrix}
+\begin{bmatrix}
+d \\ e \\ f
+\end{bmatrix} = \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix} \label{eq:inv_lin_sys}
+\end{equation}
+$$
+and $\eqref{eq:def}$ solves this equation.</p>
+</blockquote>
+<p>The inverse of the matrix in Equation $\eqref{eq:inv_lin_sys}$ is easy to find by applying the identity:
+$$
+\begin{bmatrix}
+A &amp; 0 \\<br>
+B &amp; C
+\end{bmatrix}^{-1} = \begin{bmatrix}
+A^{-1} &amp; 0 \\<br>
+-C^{-1}BA^{-1} &amp; C^{-1}
+\end{bmatrix}.
+$$</p>
+
+			</div>
+
+			<div class="tags">
+				
+					
+						<ul class="flat">
+							
+							<li><a href="/tags/geometry">geometry</a></li>
+							
+							<li><a href="/tags/navigation">navigation</a></li>
+							
+						</ul>
+					
+				
+			</div></div>
+	</div>
+        <script src="https://utteranc.es/client.js"
+        repo="mmt/smark-notes"
+        issue-term="pathname"
+        label="utterances-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+</body>
+</html>

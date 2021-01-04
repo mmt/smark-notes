@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Interesting Software - sMark Notes [DRAFT]</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Interesting Software">
+<meta itemprop="description" content="This post is a running list of some software projects I want to look into more or have found useful in the paste.">
+<meta itemprop="datePublished" content="2020-12-30T10:20:03-08:00" />
+<meta itemprop="dateModified" content="2020-12-30T10:20:03-08:00" />
+<meta itemprop="wordCount" content="160">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Interesting Software" />
+<meta property="og:description" content="This post is a running list of some software projects I want to look into more or have found useful in the paste." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/lists/interesting_software/" />
+<meta property="article:published_time" content="2020-12-30T10:20:03-08:00" />
+<meta property="article:modified_time" content="2020-12-30T10:20:03-08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Interesting Software"/>
+<meta name="twitter:description" content="This post is a running list of some software projects I want to look into more or have found useful in the paste."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://example.org/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="http://example.org/css/dark.css" />
+
+	
+		<script src="http://example.org/js/main.js"></script>
+        <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'ams'
+
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+	<h1 class="site-title"><a href="http://example.org/">sMark Notes [DRAFT]</a></h1>
+	<div class="site-description"><p>Mark M. Tobenkin&rsquo;s Notes on Math and Other Topics</p><nav class="nav social">
+			<ul class="flat"></ul>
+		</nav></div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/lists">Bookmarks</a>
+			</li>
+			
+			<li>
+				<a href="/notation">Notation</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">30</span>
+							<span class="rest">Dec 2020</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">Interesting Software</h1>
+				</div>
+			</div>
+
+			<div class="markdown">
+				<p>This post is a running list of some software projects I want to look into more or have found useful in the paste.</p>
+<h1 id="numerical-programming">Numerical Programming</h1>
+<h2 id="estimation">Estimation</h2>
+<ul>
+<li><a href="http://ceres-solver.org/">Ceres</a>: Framework for large scale nonlinear least squares solving.</li>
+<li><a href="https://mc-stan.org/">Stan</a>: I haven&rsquo;t had a chance to work with this yet, but provides more general probabilistic inference tools.</li>
+</ul>
+<h2 id="3d-sensing">3D Sensing</h2>
+<ul>
+<li><a href="http://www.open3d.org/">Open3d</a>: Library for working with 3D point cloud data sets.</li>
+</ul>
+<h2 id="optimization">Optimization</h2>
+<ul>
+<li><a href="https://web.casadi.org/">Casadi</a>: Library for optimization problems involving dynamics.  Has a solid AD engine and provides good interfaces to nonlinear optimization and ODE solvers.</li>
+</ul>
+<h2 id="libraries">Libraries</h2>
+<ul>
+<li><a href="http://eigen.tuxfamily.org/">Eigen</a>: C++ library for linear algebra &ndash; amazing.</li>
+<li><a href="https://www.mpfr.org/">GNU MPFR</a>: Multi-precision floating point library with correct rounding (useful for testing accuracy of Taylor expansions)</li>
+</ul>
+<h1 id="software-engineering">Software Engineering</h1>
+<ul>
+<li><a href="https://bazel.build/">Bazel</a>: The only build system I&rsquo;ve found that makes sense and isn&rsquo;t buried in legacy cruft.</li>
+<li><a href="https://github.com/pybind/pybind11">Pybind11</a>: An amazing way to pull C++11 or later code into Python (by comparison SWIG is archaic).</li>
+</ul>
+<h1 id="site-management">Site Management</h1>
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a>: Static webpage building software I used for this page.</li>
+</ul>
+
+			</div>
+
+			<div class="tags">
+				
+					
+				
+			</div></div>
+	</div>
+        <script src="https://utteranc.es/client.js"
+        repo="mmt/smark-notes"
+        issue-term="pathname"
+        label="utterances-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2021  © Copyright Mark M. Tobenkin 2020 |  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+</body>
+</html>
