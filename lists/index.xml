@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lists on sMark Notes [DRAFT]</title>
-    <link>http://example.org/lists/</link>
+    <link>https://mmt.github.io/smark-notes/lists/</link>
     <description>Recent content in Lists on sMark Notes [DRAFT]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
-    <lastBuildDate>Wed, 30 Dec 2020 10:20:03 -0800</lastBuildDate><atom:link href="http://example.org/lists/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 10:20:03 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/lists/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interesting Software</title>
-      <link>http://example.org/lists/interesting_software/</link>
+      <link>https://mmt.github.io/smark-notes/lists/interesting_software/</link>
       <pubDate>Wed, 30 Dec 2020 10:20:03 -0800</pubDate>
       
-      <guid>http://example.org/lists/interesting_software/</guid>
+      <guid>https://mmt.github.io/smark-notes/lists/interesting_software/</guid>
       <description>This post is a running list of some software projects I want to look into more or have found useful in the paste.</description>
     </item>
     
     <item>
       <title>Interesting Algorithms / Concepts</title>
-      <link>http://example.org/lists/interesting_algorithms/</link>
+      <link>https://mmt.github.io/smark-notes/lists/interesting_algorithms/</link>
       <pubDate>Wed, 30 Dec 2020 10:07:52 -0800</pubDate>
       
-      <guid>http://example.org/lists/interesting_algorithms/</guid>
+      <guid>https://mmt.github.io/smark-notes/lists/interesting_algorithms/</guid>
       <description>This post will just be a running collection of useful algorithms / concepts I want to remember.</description>
     </item>
     
     <item>
       <title>Interesting Papers and Books</title>
-      <link>http://example.org/lists/interesting_papers/</link>
+      <link>https://mmt.github.io/smark-notes/lists/interesting_papers/</link>
       <pubDate>Mon, 28 Dec 2020 11:30:31 -0800</pubDate>
       
-      <guid>http://example.org/lists/interesting_papers/</guid>
+      <guid>https://mmt.github.io/smark-notes/lists/interesting_papers/</guid>
       <description>Navigation and Kalman Filtering Kalman Filtering  Book: Principles of GNSS, Inertial, and Multisensor Integrated Navigation Systems Book: Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook Book: Stochastic Models, Estimation and Control: Volume 1  Inertial Sensors  IMU Error State Modeling for State Estimation and Sensor Calibration: A Tutorial  Rotation Formalisms  Quaternion kinematics for error-state Kalman filter Attitude Error Representations for Kalman Filtering On the rotation vector differential equation  Visual navigation  Keyframe-Base Visual-Inertial Odometry Using Nonlinear Optimization High-Precision, Consistent EKF-based Visual-Inertial Odometry  Lie Theory in Estimation  A micro Lie theory for state estimation in robotics  More general Math Lie Theory  Book: Naive Lie Theory  </description>
     </item>
     

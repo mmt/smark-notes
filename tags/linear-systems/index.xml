@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linear-systems on sMark Notes [DRAFT]</title>
-    <link>http://example.org/tags/linear-systems/</link>
+    <link>https://mmt.github.io/smark-notes/tags/linear-systems/</link>
     <description>Recent content in linear-systems on sMark Notes [DRAFT]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
-    <lastBuildDate>Mon, 28 Dec 2020 23:38:22 -0800</lastBuildDate><atom:link href="http://example.org/tags/linear-systems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Dec 2020 23:38:22 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/tags/linear-systems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>State Transition Matrices</title>
-      <link>http://example.org/posts/systems/transition_matrices/</link>
+      <link>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</link>
       <pubDate>Mon, 28 Dec 2020 23:38:22 -0800</pubDate>
       
-      <guid>http://example.org/posts/systems/transition_matrices/</guid>
+      <guid>https://mmt.github.io/smark-notes/posts/systems/transition_matrices/</guid>
       <description>This post has a few tricks for deriving state transitions matrices.</description>
     </item>
     
     <item>
       <title>Matrix Exponential Directional Derivative</title>
-      <link>http://example.org/posts/systems/parameter_sensitivity/</link>
+      <link>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</link>
       <pubDate>Mon, 28 Dec 2020 10:45:34 -0800</pubDate>
       
-      <guid>http://example.org/posts/systems/parameter_sensitivity/</guid>
+      <guid>https://mmt.github.io/smark-notes/posts/systems/parameter_sensitivity/</guid>
       <description>We can find a general expression for the derivative:
 $$ \left .</description>
     </item>
