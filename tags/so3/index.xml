@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>so(3) on sMark Notes [DRAFT]</title>
+    <title>so3 on sMark Notes [DRAFT]</title>
     <link>https://mmt.github.io/smark-notes/tags/so3/</link>
-    <description>Recent content in so(3) on sMark Notes [DRAFT]</description>
+    <description>Recent content in so3 on sMark Notes [DRAFT]</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
@@ -28,10 +28,10 @@
     
     <item>
       <title>Directional Derivative of $\exp$  on $\mathfrak{so}(3)$</title>
-      <link>https://mmt.github.io/smark-notes/posts/geometry/so3/</link>
+      <link>https://mmt.github.io/smark-notes/posts/geometry/so3_deriv/</link>
       <pubDate>Sun, 03 Jan 2021 20:00:07 -0800</pubDate>
       
-      <guid>https://mmt.github.io/smark-notes/posts/geometry/so3/</guid>
+      <guid>https://mmt.github.io/smark-notes/posts/geometry/so3_deriv/</guid>
       <description>This post is about finding the directional derivative: $$ \left .</description>
     </item>
     
