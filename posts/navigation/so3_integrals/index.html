@@ -7,7 +7,7 @@
 <meta itemprop="description" content="This post is about a family of integrals that are important when computing state transition matrices in certain navigation problems as well as some other applications, namely: $$ C_n(v, T) : = \int_0^{T} \int_0^{s_n} \ldots \int_0^{s_2}\exp(s_1 [v]_\times) ds_1 \; ds_2 \;\ldots \; ds_n \qquad \; n \in \{1, 2, \ldots \}.">
 <meta itemprop="datePublished" content="2021-01-03T11:48:07-08:00" />
 <meta itemprop="dateModified" content="2021-01-03T11:48:07-08:00" />
-<meta itemprop="wordCount" content="614">
+<meta itemprop="wordCount" content="691">
 
 
 
@@ -187,13 +187,28 @@ $$
 = f_0(\lVert v \lVert) I + f_1(\lVert v\rVert) [v]_\times + f_2(\rVert|v \Vert|) vv^T, \qquad v \in \mathbb{R}^n. \label{eq:rodrigues_f}
 \end{equation}
 $$</p>
+<p>It is important to note that each function $f_n(\cdot)$ has a finite limit an $0$, specifically:
+$$
+f_n(0) = \frac{1}{n!} \qquad n \in \{1, 2, 3, \ldots\}.
+$$</p>
+<blockquote>
+<p><em>Proof</em>: We proceed by induction with the base case of $f_1(0) = \lim_{\theta \rightarrow 0}frac{\sin(\theta)}{\theta} = 1$.
+Now, assuming $f_n(0) = \frac{1}{n!}$, we have:
+$$
+\begin{align}
+\lim_{\theta\rightarrow 0} f_{n+1}(\theta) &amp;=  \lim_{\theta\rightarrow 0} \frac{\gamma_{n+1}(\theta)}{\theta^{n+1}} \\<br>
+&amp;= \lim_{\theta\rightarrow 0} \frac{\gamma_{n}(\theta)}{(n+1)\theta^{n}} &amp; (\textrm{L&rsquo;Hospitals rule})\\<br>
+&amp;= \frac{1}{n+1} f_n(0) = \frac{1}{(n+1)!}.
+\end{align}
+$$</p>
+</blockquote>
 <h1 id="solution">Solution</h1>
 <p>The solution of the above integrals is given by:
 $$
 C_n(v, T) = T^n \left(f_n(T \lVert v \rVert) I  + f_{n+1}(T \lVert v \rVert) [Tv]_\times  + f_{n+2}(T \lVert v \rVert) (Tv)(Tv)^T\right).
 $$</p>
 <blockquote>
-<p><em>Proof</em>: When $\lVert v \rVert = 0$ the solution holds obviously, otherwise let:</p>
+<p><em>Proof</em>: When $\lVert v \rVert = 0$ the desired result is easy to verify as $f_n(0) = \frac{1}{n!}$, otherwise let:</p>
 <ul>
 <li>$\theta := T \lVert v \rVert$</li>
 <li>$u := \frac{v}{\lVert v \rVert}$</li>
@@ -255,7 +270,6 @@ $$</p>
 <p>From these last two equations we see that:</p>
 <ul>
 <li>The $f_n$ functions are all even.</li>
-<li>$f_n(0) = \frac{1}{n!}$ for all $n$.</li>
 <li>$\gamma_n(\theta) + \gamma_{n+2}(\theta) = \frac{\theta^n}{n!}$ for all $n \in \{0, 1, 2, \ldots \}$.</li>
 <li>$f_n(\theta) + \theta^2 f_{n+2}(\theta) = \frac{1}{n!}$ for all $n \in \{0, 1, 2, \ldots \}$.</li>
 </ul>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright Mark M. Tobenkin 2020</copyright>
-    <lastBuildDate>Sun, 03 Jan 2021 20:00:21 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 10:38:42 -0800</lastBuildDate><atom:link href="https://mmt.github.io/smark-notes/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integration on SO(3)</title>
+      <link>https://mmt.github.io/smark-notes/posts/navigation/so3_trapz/</link>
+      <pubDate>Mon, 04 Jan 2021 10:38:42 -0800</pubDate>
+      
+      <guid>https://mmt.github.io/smark-notes/posts/navigation/so3_trapz/</guid>
+      <description>This post is about numerical integration on $SO(3)$, i.e. how to approximate the solution of: $$ \frac{d}{dt} C(t) = C(t)[\omega(t)]_\times $$ given only $C(t_0) \in SO(3)$ and samples of $\omega(\cdot)$.</description>
+    </item>
+    
     <item>
       <title>Derivation of the Bortz Equation</title>
       <link>https://mmt.github.io/smark-notes/posts/navigation/bortz/</link>
@@ -18,7 +27,7 @@
     </item>
     
     <item>
-      <title>Directional Derivative of $\exp$:  on $\mathfrak{so}(3)$</title>
+      <title>Directional Derivative of $\exp$  on $\mathfrak{so}(3)$</title>
       <link>https://mmt.github.io/smark-notes/posts/geometry/so3/</link>
       <pubDate>Sun, 03 Jan 2021 20:00:07 -0800</pubDate>
       

@@ -7,7 +7,7 @@
 <meta itemprop="description" content="This post gives a derivation of the Bortz Equation, which is useful for deriving integration schemes for rotation matrices.">
 <meta itemprop="datePublished" content="2021-01-03T20:00:21-08:00" />
 <meta itemprop="dateModified" content="2021-01-03T20:00:21-08:00" />
-<meta itemprop="wordCount" content="344">
+<meta itemprop="wordCount" content="343">
 
 
 
@@ -118,7 +118,7 @@ the <a href="https://ntrs.nasa.gov/citations/19700013316">Bortz Equation</a>,
 which is useful for deriving integration schemes for rotation
 matrices.  Let $C: [t_0,
 t_f] \rightarrow SO(3)$ be defined via a smoothly time-varying rotation axis
-$\phi: [t_0, t_f] \rightarrow \mathbb{R}^3$ via:
+$\phi: [t_0, t_f] \rightarrow \mathbb{R}^3$:
 $$
 C(t) = \exp([\phi(t)]_\times).
 $$
@@ -126,7 +126,7 @@ We know that the derivative of $C$ can always be written as:
 $$
 \dot C(t) = C(t)[\omega(t)]_\times, \qquad \omega: [t_0, t_f] \rightarrow \mathbb{R}^3.
 $$
-In this setting the Bortz Equation relates $\dot \phi(t)$ and $\omega(t)$ via:
+In this setting the Bortz Equation relates $\dot \phi(t)$ and $\omega(t)$ by:
 $$
 \begin{align}
 \dot \phi(t) &amp;= \left (I  + \frac{1}{2} [\phi(t)]_\times +\frac{1}{\|\phi(t)\|^2}
@@ -143,12 +143,12 @@ Based on the previous post on the <a href="https://mmt.github.io/smark-notes/pos
 $$
 \begin{align}
 \frac{d}{dt} C(t) &amp;= \frac{d}{dt} \exp([\phi(t)]_\times)\\<br>
-&amp;=C(t)\left [\left(\frac{\sin(\theta)}{\theta} I - \frac{1- \cos(\theta)}{\theta^2} [\omega]_\times + \frac{\theta - \sin(\theta)}{\theta^3} \omega \omega^T\right) \dot \phi(t)\right]_\times
+&amp;=C(t)\left [\left(\frac{\sin(\theta)}{\theta} I - \frac{1- \cos(\theta)}{\theta^2} [\phi(t)]_\times + \frac{\theta - \sin(\theta)}{\theta^3} \phi(t) \phi(t)^T\right) \dot \phi(t)\right]_\times
 \end{align}
 $$
 where $\theta = \| \phi(t)\|$. Our goal is then to solve:
 $$
-\left(\frac{\sin(\theta)}{\theta} I - \frac{1- \cos(\theta)}{\theta^2} [\omega]_\times + \frac{\theta - \sin(\theta)}{\theta^3} \omega \omega^T\right) \dot \phi(t) = \omega(t).
+\left(\frac{\sin(\theta)}{\theta} I - \frac{1- \cos(\theta)}{\theta^2} [\phi(t)]_\times + \frac{\theta - \sin(\theta)}{\theta^3} \phi(t) \phi(t)^T\right) \dot \phi(t) = \omega(t).
 $$
 If $\theta = 0$, then we clearly have $\dot \phi(t) = \omega(t)$.  Otherwise, let $u = \frac{\phi(t)}{\theta}$, and write:
 $$
